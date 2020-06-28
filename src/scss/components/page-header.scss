@@ -1,0 +1,23 @@
+.page-header {
+  display: flex;
+  padding: 10px 0;
+
+  &__main-menu {
+    margin: 0;
+    padding: 0;
+  }
+}
+@media (max-width: $mobile-width-only) {
+  .page-header {
+    &__main-menu {
+      display: none;
+      padding-top: 60px;
+      padding-left: 50px;
+    }
+  }
+}
+@media (min-width: $desktop-width) {
+  .page-header {
+
+  }
+}

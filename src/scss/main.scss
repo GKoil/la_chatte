@@ -1,11 +1,17 @@
 // Common imports
 @import "vendors";
 @import "reset";
-
+@import "variables";
+@import "fonts";
+@import "mixins";
+@import "core";
 
 // Pages styles
-@import "pages/index";
+// @import "pages/index";
 
 
 // Components styles
-@import "components/example";
+@import "components/page-header";
+@import "components/logo";
+@import "components/main-menu";
+@import "components/main-nav";
