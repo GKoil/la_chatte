@@ -16,10 +16,10 @@
     "gulp-uglify": "^2.1.2",
     "gulp-watch": "^4.3.11",
     "imagemin": "^5.3.1",
-    "imagemin-pngquant": "^5.0.0",
-    "normalize.css": "^8.0.1"
+    "imagemin-pngquant": "^5.0.0"
   },
   "dependencies": {
-    "jquery": "^3.5.1"
+    "jquery": "^3.5.1",
+    "normalize.css": "^8.0.1"
   }
 }
