@@ -8,6 +8,7 @@ const gulp = require('gulp'),
   pngquant = require('imagemin-pngquant'),
   rigger = require('gulp-rigger'),
   cleanCSS = require('gulp-clean-css'),
+  spritesmith = require('gulp.spritesmith'),
   rename = require('gulp-rename'),
   del = require('del'),
   browserSync = require("browser-sync").create();
@@ -94,6 +95,19 @@ function images() {
     .pipe(gulp.dest(path.build.img));
 }
 
+function spriteIcons() {
+  const spriteData = gulp.src('src/images/icons/*.png').pipe(spritesmith({
+		// retinaSrcFilter: 'src/images/icons/*@2x.png',
+		imgName: 'sprite@1x.png',
+		// retinaImgName: 'sprite@2x.png', 
+    cssName: 'sprite.scss',
+    imgPath: '../../images/sprite@1x.png', //Путь, прописываемый в файле scss изображениям
+		// retinaImgPath: '../../images/sprite@2x.png'
+		}));
+  return spriteData.img.pipe(gulp.dest('src/images/')), // Путь, куда сохраняем картинку
+         spriteData.css.pipe(gulp.dest('src/scss/')); // Путь, куда сохраняем стили
+}
+
 // Копирование шрифтов
 function fonts() {
   return gulp.src(path.src.fonts)
@@ -122,7 +136,7 @@ function clean() {
   return del([path.build.html]);
 }
 
-const build = gulp.series(clean, gulp.parallel(style, js, html, images, fonts));
+const build = gulp.series(clean, gulp.parallel(style, js, html, spriteIcons, images, fonts));
 const watch = gulp.series(build, gulp.parallel(watchFiles, browserSyncInit));
 
 
@@ -132,6 +146,7 @@ exports.style = style;
 exports.js = js;
 exports.html = html;
 exports.clean = clean;
+exports.sprite = spriteIcons;
 
 exports.watch = watch;
 exports.build = build;

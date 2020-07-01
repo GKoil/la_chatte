@@ -1,0 +1,123 @@
+// SCSS variables are information about icon's compiled state, stored under its original file name
+//
+// .icon-home {
+//   width: $icon-home-width;
+// }
+//
+// The large array-like variables contain all information about a single icon
+// $icon-home: x y offset_x offset_y width height total_width total_height image_path;
+//
+// At the bottom of this section, we provide information about the spritesheet itself
+// $spritesheet: width height image $spritesheet-sprites;
+$mouse-name: 'mouse';
+$mouse-x: 0px;
+$mouse-y: 0px;
+$mouse-offset-x: 0px;
+$mouse-offset-y: 0px;
+$mouse-width: 41px;
+$mouse-height: 112px;
+$mouse-total-width: 83px;
+$mouse-total-height: 112px;
+$mouse-image: '../../images/sprite@1x.png';
+$mouse: (0px, 0px, 0px, 0px, 41px, 112px, 83px, 112px, '../../images/sprite@1x.png', 'mouse', );
+$mouse-arr-name: 'mouse_arr';
+$mouse-arr-x: 61px;
+$mouse-arr-y: 22px;
+$mouse-arr-offset-x: -61px;
+$mouse-arr-offset-y: -22px;
+$mouse-arr-width: 14px;
+$mouse-arr-height: 18px;
+$mouse-arr-total-width: 83px;
+$mouse-arr-total-height: 112px;
+$mouse-arr-image: '../../images/sprite@1x.png';
+$mouse-arr: (61px, 22px, -61px, -22px, 14px, 18px, 83px, 112px, '../../images/sprite@1x.png', 'mouse_arr', );
+$phone-name: 'phone';
+$phone-x: 61px;
+$phone-y: 0px;
+$phone-offset-x: -61px;
+$phone-offset-y: 0px;
+$phone-width: 22px;
+$phone-height: 22px;
+$phone-total-width: 83px;
+$phone-total-height: 112px;
+$phone-image: '../../images/sprite@1x.png';
+$phone: (61px, 0px, -61px, 0px, 22px, 22px, 83px, 112px, '../../images/sprite@1x.png', 'phone', );
+$sl-arr-name: 'sl-arr';
+$sl-arr-x: 41px;
+$sl-arr-y: 0px;
+$sl-arr-offset-x: -41px;
+$sl-arr-offset-y: 0px;
+$sl-arr-width: 20px;
+$sl-arr-height: 105px;
+$sl-arr-total-width: 83px;
+$sl-arr-total-height: 112px;
+$sl-arr-image: '../../images/sprite@1x.png';
+$sl-arr: (41px, 0px, -41px, 0px, 20px, 105px, 83px, 112px, '../../images/sprite@1x.png', 'sl-arr', );
+$spritesheet-width: 83px;
+$spritesheet-height: 112px;
+$spritesheet-image: '../../images/sprite@1x.png';
+$spritesheet-sprites: ($mouse, $mouse-arr, $phone, $sl-arr, );
+$spritesheet: (83px, 112px, '../../images/sprite@1x.png', $spritesheet-sprites, );
+
+// The provided mixins are intended to be used with the array-like variables
+//
+// .icon-home {
+//   @include sprite-width($icon-home);
+// }
+//
+// .icon-email {
+//   @include sprite($icon-email);
+// }
+//
+// Example usage in HTML:
+//
+// `display: block` sprite:
+// <div class="icon-home"></div>
+//
+// To change `display` (e.g. `display: inline-block;`), we suggest using a common CSS class:
+//
+// // CSS
+// .icon {
+//   display: inline-block;
+// }
+//
+// // HTML
+// <i class="icon icon-home"></i>
+@mixin sprite-width($sprite) {
+  width: nth($sprite, 5);
+}
+
+@mixin sprite-height($sprite) {
+  height: nth($sprite, 6);
+}
+
+@mixin sprite-position($sprite) {
+  $sprite-offset-x: nth($sprite, 3);
+  $sprite-offset-y: nth($sprite, 4);
+  background-position: $sprite-offset-x  $sprite-offset-y;
+}
+
+@mixin sprite-image($sprite) {
+  $sprite-image: nth($sprite, 9);
+  background-image: url(#{$sprite-image});
+}
+
+@mixin sprite($sprite) {
+  @include sprite-image($sprite);
+  @include sprite-position($sprite);
+  @include sprite-width($sprite);
+  @include sprite-height($sprite);
+}
+
+// The `sprites` mixin generates identical output to the CSS template
+//   but can be overridden inside of SCSS
+//
+// @include sprites($spritesheet-sprites);
+@mixin sprites($sprites) {
+  @each $sprite in $sprites {
+    $sprite-name: nth($sprite, 10);
+    .#{$sprite-name} {
+      @include sprite($sprite);
+    }
+  }
+}
