@@ -44,5 +44,16 @@
         popupAddition.classList.add('popup-addition--closed');
       }
     });
+
+    const changeMainLogo = () => { //TODO: change 
+      const logoFirst = document.querySelector('.logo__first');
+      const logoSecond = document.querySelector('.logo__second');
+      logoFirst.textContent = 'L';
+      logoSecond.textContent = 'C';
+    }
+
+    window.addEventListener('scroll', () => {
+      changeMainLogo();
+    });
   });
 })(jQuery)

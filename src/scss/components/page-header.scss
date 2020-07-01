@@ -1,6 +1,8 @@
 .page-header {
   display: flex;
   padding: 10px 0;
+  width: 100%;
+  position: fixed;
 
   &__main-menu {
     margin: 0;
@@ -9,6 +11,7 @@
 }
 @media (max-width: $mobile-width-only) {
   .page-header {
+    background-color: #fff;
     &__main-menu {
       display: none;
       padding-top: 60px;

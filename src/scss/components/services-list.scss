@@ -1,0 +1,26 @@
+.services-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  &__item-link {
+    color: $black;
+    font-size: 28px;
+    text-transform: uppercase;
+  }
+}
+
+@media (min-width: $mobile-width-only) {
+  .services-list {
+    &__item-link {
+      font: 50px/1.2 "Futura PT Book";
+    }
+  }
+}
+@media (max-width: $mobile-width-only) {
+  .services-list {
+    &__item-link {
+      color: #fff;
+    }
+  }
+}
