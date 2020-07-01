@@ -1,0 +1,39 @@
+.popup-addition {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #fff;
+
+  @include icon-close;
+  &__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  div {
+    flex-basis: 50%;
+    height: 100vh;
+  }
+  &__menu {
+    background-color: #f5f5f5;
+    padding: 40px;
+  } 
+  &__menu-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  &__menu-list-item-link {
+    color: #a7a7a7;
+    font: 25px "Futura PT Book";
+    display: block;
+    margin-bottom: 15px;
+  }
+}
+.popup-addition--closed {
+  display: none;
+}
+.popup-addition--opened {
+  display: block;
+}

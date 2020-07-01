@@ -1,0 +1,58 @@
+.popup-call {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #fff;
+  min-height: 100vh;
+  width: 100%;
+  @include icon-close;
+  
+  &__title {
+    font-size: 24px;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 40px 0 20px; 
+    margin-bottom: 15px;
+  }
+  &__form {
+    padding: 0 40px;
+  }
+  &__field {
+    display: block;
+    width: 100%;
+    border: none;
+    font-weight: 300;
+    font-size: 21px;
+    color: #a7a7a7;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+    border-bottom: solid 1px #d4d4d4;
+  }
+  &__link {
+    color: #3c6db2;
+    text-decoration: none;
+    font-size: 20px;
+    margin-bottom: 10px;
+    display: block;
+  }
+  &__send {
+    cursor: pointer;
+    display: block;
+    border: none;
+    background-color: $orange;
+    width: 100%;
+    max-width: 389px;
+    padding: 20px 25px 19px;
+    text-transform: uppercase;
+    color: #fff;
+    border-radius: 70px;
+    box-shadow: 0 21px 49px 0 rgba(244,110,96,.41);
+    font: 22px "Futura PT";
+  }
+}
+.popup-call--closed {
+  display: none;
+}
+.popup-call--opened {
+  display: block;
+}

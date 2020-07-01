@@ -1,11 +1,29 @@
 .main-menu {
   list-style: none;
-
-  &__item {
-    // text-align: center;
+  &__item-link--addition {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    border: none;
+    background-color: #fff;
+    top: 5px;
   }
-  &__item--addition {
-    display: none;
+  &__item-link--addition::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 30px;
+    height: 30px;
+    background-color: $orange;
+    border-radius: 50%;
+  }
+  &__item-link--addition::after {
+    content: "...";
+    color: #fff;
+    position: absolute;
+    left: 7px;
+    top: -10px;
   }
   &__item-link {
     font-weight: 300;
@@ -33,6 +51,9 @@
       font-size: 28px;
       line-height: 40px;
     }
+    &__item--addition {
+      display: none;
+    }
   }
 }
 
@@ -41,7 +62,8 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    width: 500px;
+    width: 40%;
+    max-width: 500px;
     &__item-link {
       font-weight: 300;
       font-size: 20px;

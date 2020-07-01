@@ -19,18 +19,14 @@
     right: 0;
     width: 40px;
     height: 40px;
-    // background: #f46e60 url(../../images/icons/phone.png);
-    // background-repeat: no-repeat;
-    // background-position: center center;
     background-color: #fff;
     border: none;
-    // border-radius: 50%;
+    cursor: pointer;
   }
   &__phone-text span {
     display: none;
   }
   &__phone-text {
-    // display: none;
     position: relative;
     padding-left: 40px;
     min-height: 40px;
@@ -42,19 +38,18 @@
     width: 40px;
     border-radius: 50%;
     top: 0;
-    left: 0;
+    left: -5px;
     position: absolute;
   }
   &__phone-text::after {
     content: "";
     height: 40px;
     width: 40px;
-    top: 0;
-    left: 0;
+    top: 8px;
+    left: 4px;
     position: absolute;
-    background-image: url(../../images/icons/phone.png);
+    @include sprite($phone);
     background-repeat: no-repeat;
-    background-position: center;
   }
 }
 
@@ -63,17 +58,17 @@
     display: block;
     top: 0;
     left: 0;
+    right: 0;
+    bottom: 0;
     z-index: 1;
     position: fixed;
     background: linear-gradient(227deg,#252321,#161515);
-    height: 100vh;
-    width: 100vh;
   }
   .main-nav {
     &__logo {
       display: block;
       margin: 0 auto;
-      max-width: 160px;
+      max-width: 170px;
     }
   }
   .main-nav--closed .main-nav__toggle::before {
@@ -86,36 +81,35 @@
     background-color: #000;
     box-shadow: 0 8px 0 0 #000, 0 16px 0 0 #000;
   }
-  .main-nav--opened .main-nav__toggle::before, .main-nav--opened .main-nav__toggle::after {
+  .main-nav--opened .main-nav__toggle::before, 
+  .main-nav--opened .main-nav__toggle::after {
     content: "";
     position: absolute;
     top: 20px;
     left: 18px;
     width: 36px;
     height: 2px;
-    background-color: #000;
+    background-color: rgba(255, 255, 255, 0.3);
   }
-  .main-nav--opened .main-nav__toggle::before {
-    transform: rotate(45deg);
+  .main-nav--opened .main-nav__toggle::before,
+  .main-nav--opened .main-nav__toggle::after {
     box-shadow: none;
     z-index: 2;
     background-color: #fff;
   }
+  .main-nav--opened .main-nav__toggle::before {
+    transform: rotate(45deg);
+  }
   .main-nav--opened .main-nav__toggle::after {
     transform: rotate(-45deg);
-    z-index: 2;
-    background-color: #fff;
-  }
-  .main-nav--opened .main-nav__toggle:active::before, .main-nav--opened .main-nav__toggle:active::after {
-    background-color: rgba(255, 255, 255, 0.3);
   }
 }
 @media (min-width: $mobile-width-only) {
   .main-nav {
     width: 100%;
     margin: 0 auto;
-    margin-left: 70px;
-    margin-right: 130px;
+    margin-left: 3.5%;
+    margin-right: 5%;
     max-width: 1920px;
     display: flex;
     flex-wrap: wrap;
@@ -124,6 +118,7 @@
       position: relative;
       width: 240px;
       border-radius: 20px;
+      min-height: 46px;
     }
     &__phone-text {
       max-width: 200px;
