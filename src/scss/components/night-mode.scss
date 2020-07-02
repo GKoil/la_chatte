@@ -1,0 +1,46 @@
+.night-mode {
+  position: fixed;
+  bottom: 20px;
+  left: 82%;
+  box-shadow: 0 -8px 49px 0 rgba(255,255,255,.36);
+  border-radius: 30px;
+  width: 80px;
+  height: 40px;
+  
+  &__toggle {
+    height: 100%;
+    width: 100%;
+    border-radius: 30px;
+    border: none;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      height: 35px;
+      top: 2px;
+      width: 35px;
+      border-radius: 50%;
+    }
+
+    &--off {
+      background-color: #fff;
+      &::before {
+        left: 2px;
+        background-color: $orange;
+      }
+    }
+    &--on {
+      background-color: $night-button;
+      &::before {
+        right: 2px;
+        background-color: #fff;
+      }
+    }
+  }
+}
+@media (max-width: $mobile-width-only) {
+  .night-mode {
+    display: none;
+  }
+}

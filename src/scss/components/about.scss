@@ -8,30 +8,23 @@
 }
 @media (min-width: $mobile-width-only) {
   .about {
-    &__content {
-      flex-basis: 70%;
-      justify-content: center;
-    }
-    &__addition {
+/*     &__addition-wrapper {
+      max-height: 100vh;
       display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-basis: 30%;
-    }
-    &__addition-wrapper {
-      // height: 100vh;
-    }
+      flex-direction: column;
+      justify-content: space-between;
+    } */
     &__addition-work {
       font-size: 40px;
       display: block;
       transform: rotate(-90deg);
       font-weight: 500;
-      max-width: 200px;
+      max-width: 300px;
       line-height: 1.2;
       color: #fff;
     }
     &__addition-projects {
-      margin-top: 50px;
+      margin-top: 70px;
       display: block;
       line-height: 1;
       color: #fff;
@@ -47,9 +40,7 @@
       font-size: 20px;
       text-transform: uppercase;
     }
-    &__addition--orange {
-      background-color: $orange;
-    }
+
   }
 }
 @media (max-width: $mobile-width-only) {

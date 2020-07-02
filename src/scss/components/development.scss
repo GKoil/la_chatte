@@ -1,0 +1,21 @@
+.development {
+  &__title-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1120px;
+    margin: 0 auto;
+    margin-bottom: 170px;
+  }
+  &__title {
+    font-size: 110px;
+    line-height: 1.05;
+    max-width: 550px;
+  }
+  &__subtitle {
+    line-height: 1.7;
+    font-size: 20px;
+    color: $greyish;
+    max-width: 461px;
+  }
+}

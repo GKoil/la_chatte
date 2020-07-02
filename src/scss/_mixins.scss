@@ -27,3 +27,27 @@
     }
   }
 }
+@mixin arrow {
+  &__button-inner {
+    width: 2px;
+    background: #fff;
+    height: 100%;
+    margin: 0 auto;
+    &::before, 
+    &::after {
+      position: absolute;
+      content: "";
+      width: 2px;
+      height: 10px;
+      background: #fff;
+    }
+    &::before {
+      transform: rotate(-45deg);
+      left: 56%;
+    }
+    &::after {
+      transform: rotate(45deg);
+      right: 56%;
+    }
+  }
+}
