@@ -20,6 +20,7 @@
     "imagemin-pngquant": "^5.0.0"
   },
   "dependencies": {
+    "bootstrap": "^4.5.0",
     "jquery": "^3.5.1",
     "normalize.css": "^8.0.1"
   }
