@@ -33,7 +33,7 @@
   @include arrow;
 }
 
-@media (max-width: $mobile-width-only) {
+@media (max-width: $tablet-width) {
   .navigation {
     display: none;
   }

@@ -1,0 +1,47 @@
+@media (min-width: $tablet-width) {
+  .hint-scroll {
+    position: fixed;
+    left: 36%;
+    bottom: 40px;
+    height: 72px;
+    width: 41px;
+    
+    &--on {
+      display: block;
+    }
+    &--off {
+      display: none;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      @include sprite($mouse-gray);
+    }
+    @keyframes moveDown {
+      0% {
+        transform:translateY(0);
+        opacity:0;
+      }
+      50% {
+        transform:translateY(5px);
+        opacity:.5;
+      }
+      100% {
+        transform:translateY(10px);
+        opacity:.1;
+      }
+    }
+    &::before {
+      content: "";
+      width: 14px;
+      height: 18px;
+      position: absolute;
+      bottom: 0;
+      left: 13px;
+      @include sprite($mouse_arr);
+      animation: moveDown 1s linear 0s infinite;
+    }
+  }
+}

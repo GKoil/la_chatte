@@ -63,6 +63,7 @@
       }
     });
 
+    //---- change logo on scroll
     const addScrollLogo = () => {
       const logoScroll = document.createElement('span');
       logoScroll.className = 'logo__text--scroll';
@@ -86,9 +87,38 @@
         mainLogo.classList.remove('logo__text--off');
         mainLogo.classList.add('logo__text--on');
       }
-    }
+    };
     window.addEventListener('scroll', () => {
       changeMainLogo(pageYOffset);
     });
+    //----
+
+    //---- add hint about scrolling 
+    const addHintScroll = () => {
+      const containerBlock = document.createElement('div');
+      containerBlock.className = 'hint-scroll';
+
+      const body = document.querySelector('.main-body');
+      body.append(containerBlock);
+    }
+    addHintScroll();
+
+    const hiddentHintScroll = (scrollTop) => {
+      const hint = document.querySelector('.hint-scroll');
+
+      if (scrollTop > 10) {
+        hint.classList.remove('hint-scroll--on');
+        hint.classList.add('hint-scroll--off');
+      } else {
+        hint.classList.remove('hint-scroll--off');
+        hint.classList.add('hint-scroll--on');
+      }
+    };
+
+    window.addEventListener('scroll', () => {
+      hiddentHintScroll(pageYOffset);
+    });
+    //----
+
   });
 })(jQuery)

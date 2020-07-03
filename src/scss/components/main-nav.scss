@@ -2,6 +2,10 @@
   position: relative;
   width: 320px;
   margin: 0 auto;
+  &__logo {
+    width: 164px;
+    text-align: center;
+  }
   &__toggle {
     position: absolute;
     top: 0;
@@ -20,6 +24,16 @@
     height: 40px;
     background-color: #fff;
     border: none;
+  }
+  &__phone-icon-button {
+    width: 40px;
+    height: 40px;
+    background-color: transparent;
+    border: none;
+    position: absolute;
+    top: 0;
+    left: -5px;
+    z-index: 1;
   }
   &__phone-text span {
     display: none;
@@ -66,6 +80,12 @@
       display: block;
       margin: 0 auto;
       max-width: 170px;
+    }
+    &__phone-number {
+      display: none;
+    }
+    &__phone-text-button {
+      display: none;
     }
   }
   .main-nav--closed .main-nav__toggle::before {
@@ -135,16 +155,7 @@
       line-height: 18px;
       color: #000;
     }
-    &__phone-icon-button {
-      width: 40px;
-      height: 40px;
-      background-color: transparent;
-      border: none;
-      position: absolute;
-      top: 0;
-      left: -5px;
-      z-index: 1;
-    }
+
     &__phone-text-button {
       font-size: 16px;
       line-height: 16px;

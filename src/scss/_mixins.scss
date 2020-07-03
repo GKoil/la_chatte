@@ -62,13 +62,13 @@
   // 28 - 0.05 * 320 = 12
   $coefficient: $min-font - $coefficient-px * $min-width;
   // calc(0.05 * 100vw + 12px)
-  
+
   //
-  font-size: $min-font;
+  font-size: $min-font; //размер шрифта на $min-width и ниже разрешении экрана
   @media (min-width: $min-width) {
-    font-size: calc(#{$coefficient-px} * 100vw + #{$coefficient});;
+    font-size: calc(#{$coefficient-px} * 100vw + #{$coefficient});
   }
   @media (min-width: $max-width) {
-    font-size: $max-font;
+    font-size: $max-font; //размер шрифта на $max-width и выше разрешении экрана
   }
 }

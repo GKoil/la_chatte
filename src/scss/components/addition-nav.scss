@@ -2,13 +2,12 @@
   list-style: none;
   padding: 0;
   margin: 0;
-  &__title {
-    font-size: 110px;
-    line-height: 1.05;
-  }
   &__item-link {
+    text-transform: lowercase;
+    text-decoration: underline;
     color: #fff;
-    font-size: 42px;
+    @include adaptive-font(18px, 767px, 42px, 1920px);
     line-height: 1.55;
+    font-family: "Futura PT Book";
   }
 }

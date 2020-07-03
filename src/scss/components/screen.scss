@@ -1,12 +1,24 @@
-@media (min-width: $mobile-width-only) {
+.screen {
+  display: flex;
+  flex-wrap: wrap;
+  &__main {
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+  }
+}
+@media (min-width: $tablet-width) {
   .screen {
     display: flex;
     flex-wrap: wrap;
     &__main {
+      padding-top: 82px;
       flex-basis: 70%;
       justify-content: center;
     }
     &__addition {
+      padding-top: 82px;
+      // padding-bottom: 60px;
       display: flex;
       flex-direction: column;
       align-items: center;

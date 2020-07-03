@@ -1,3 +1,12 @@
+// Vendor
+// @import "../../node_modules/bootstrap/scss/bootstrap";
+// Требуемое
+@import "node_modules/bootstrap/scss/functions";
+@import "node_modules/bootstrap/scss/variables";
+@import "node_modules/bootstrap/scss/mixins";
+@import "../../node_modules/bootstrap/scss/grid";
+ 
+
 // Common imports
 @import "vendors";
 @import "reset";
@@ -22,9 +31,11 @@
 @import "components/popup-addition";
 @import "components/page-main";
 @import "components/services-list";
-@import "components/about";
 @import "components/navigation";
 @import "components/night-mode";
-@import "components/development";
 @import "components/screen";
+@import "components/about";
+@import "components/development";
 @import "components/addition-nav";
+@import "components/form-send";
+@import "components/hint-scroll";
