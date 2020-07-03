@@ -63,16 +63,32 @@
       }
     });
 
-    //TODO: change 
-    const changeMainLogo = () => { 
-      /* const logoFirst = document.querySelector('.logo__first');
-      const logoSecond = document.querySelector('.logo__second');
-      logoFirst.textContent = 'L';
-      logoSecond.textContent = 'C'; */
+    const addScrollLogo = () => {
+      const logoScroll = document.createElement('span');
+      logoScroll.className = 'logo__text--scroll';
+      logoScroll.innerHTML = '<span class="logo__first">L</span><span class="logo__second">C</span>'
+
+      document.querySelector('.logo__title').append(logoScroll);
+    }
+    addScrollLogo();
+
+    const changeMainLogo = (scrollTop) => { 
+      const mainLogo = document.querySelector('.logo__text--main');
+      const scrollLogo = document.querySelector('.logo__text--scroll');
+      if (scrollTop > 50) {
+        mainLogo.classList.remove('logo__text--on');
+        mainLogo.classList.add('logo__text--off');
+        scrollLogo.classList.remove('logo__text--off');
+        scrollLogo.classList.add('logo__text--on');
+      } else {
+        scrollLogo.classList.remove('logo__text--on');
+        scrollLogo.classList.add('logo__text--off');
+        mainLogo.classList.remove('logo__text--off');
+        mainLogo.classList.add('logo__text--on');
+      }
     }
     window.addEventListener('scroll', () => {
-      changeMainLogo();
+      changeMainLogo(pageYOffset);
     });
-    // ----
   });
 })(jQuery)
