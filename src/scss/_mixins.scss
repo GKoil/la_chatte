@@ -51,3 +51,24 @@
     }
   }
 }
+@mixin adaptive-font ($min-font, $min-width, $max-font, $max-width) {
+  // https://habr.com/ru/company/mailru/blog/315196/
+  // 110px - 28px = 82px
+  $different-fonts: $max-font - $min-font;
+  // 1920 - 320px = 1600px
+  $different-width: $max-width - $min-width;
+  // 82 / 1600 = 0.05px
+  $coefficient-px: $different-fonts / $different-width;
+  // 28 - 0.05 * 320 = 12
+  $coefficient: $min-font - $coefficient-px * $min-width;
+  // calc(0.05 * 100vw + 12px)
+  
+  //
+  font-size: $min-font;
+  @media (min-width: $min-width) {
+    font-size: calc(#{$coefficient-px} * 100vw + #{$coefficient});;
+  }
+  @media (min-width: $max-width) {
+    font-size: $max-font;
+  }
+}
