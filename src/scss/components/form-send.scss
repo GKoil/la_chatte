@@ -7,7 +7,7 @@
     width: 100%;
     border: none;
     font-weight: 300;
-    font-size: 21px;
+    @include adaptive-font(16px, 320px, 21px, 1920px);
     color: #a7a7a7;
     padding-bottom: 10px;
     margin-bottom: 15px;
@@ -17,6 +17,7 @@
     color: #3c6db2;
     text-decoration: none;
     font-size: 20px;
+    @include adaptive-font (14px, 320px, 20px, 1920px);
     margin-bottom: 10px;
     display: block;
     &--development {
@@ -35,7 +36,7 @@
     color: #fff;
     border-radius: 70px;
     box-shadow: 0 21px 49px 0 rgba(244,110,96,.41);
-    font: 22px "Futura PT";
+    @include adaptive-font(16px, 320px, 22px, 1920px);
   }
   &__fields-wrapper {
     display: flex;
@@ -48,12 +49,12 @@
 }
 @media (max-width: $mobile-width-only) {
   .form-send {
-    &__item-wrapper {
+    &__item-wrapper--screen {
       display: none;
-      &--button {
-        display: block;
-        padding: 0;
-      }
+    }
+    &__item-wrapper--button {
+      display: block;
+      padding: 0;
     }
   }
 }

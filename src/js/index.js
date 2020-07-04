@@ -10,7 +10,11 @@
     const navAddition = document.querySelector('.main-menu__item-link--addition');
     const closePopupAddition = document.querySelector('.popup-addition__closed');
     const themeToggle = document.querySelector('.night-mode__toggle');
-  
+    const buttonSendApplicationMobile = document.querySelector('.form-send__send');
+    const popupApplication = document.querySelector('.popup-application');
+
+    const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent);
+      
     navMain.classList.remove('main-nav--nojs');
   
     navToggle.addEventListener('click', () => {
@@ -66,12 +70,14 @@
     //---- change logo on scroll
     const addScrollLogo = () => {
       const logoScroll = document.createElement('span');
-      logoScroll.className = 'logo__text--scroll';
+      logoScroll.className = 'logo__text--scroll logo__text--off';
       logoScroll.innerHTML = '<span class="logo__first">L</span><span class="logo__second">C</span>'
 
       document.querySelector('.logo__title').append(logoScroll);
     }
-    addScrollLogo();
+    if (isMobile) {
+      addScrollLogo();
+    }
 
     const changeMainLogo = (scrollTop) => { 
       const mainLogo = document.querySelector('.logo__text--main');
@@ -89,7 +95,9 @@
       }
     };
     window.addEventListener('scroll', () => {
-      changeMainLogo(pageYOffset);
+      if (isMobile) {
+        changeMainLogo(pageYOffset);
+      }
     });
     //----
 
@@ -101,7 +109,9 @@
       const body = document.querySelector('.main-body');
       body.append(containerBlock);
     }
-    addHintScroll();
+    if (!isMobile) {
+      addHintScroll();
+    }
 
     const hiddentHintScroll = (scrollTop) => {
       const hint = document.querySelector('.hint-scroll');
@@ -116,9 +126,18 @@
     };
 
     window.addEventListener('scroll', () => {
-      hiddentHintScroll(pageYOffset);
+      if (!isMobile) {
+        hiddentHintScroll(pageYOffset);
+      }
     });
     //----
+
+    buttonSendApplicationMobile.addEventListener('click', () => {
+      if (popupApplication.classList.contains('popup-application--closed')) {
+        popupApplication.classList.remove('popup-application--closed');
+        popupApplication.classList.add('popup-application--opened');
+      }
+    });
 
   });
 })(jQuery)
