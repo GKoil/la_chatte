@@ -12,6 +12,7 @@
 @media (max-width: $mobile-width-only) {
   .page-header {
     background-color: #fff;
+    min-height: 62px;
     &__main-menu {
       display: none;
       padding-top: 60px;
