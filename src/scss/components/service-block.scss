@@ -46,9 +46,17 @@
 @media (min-width: $tablet-width) {
   .service-block {
     &__addition {
-      background-color: $denim-blue;
+      &--development {
+        background-color: $denim-blue;
+      }
+      &--design {
+        background-color: $charcoal-grey;
+      }
+      &--support {
+        background-color: $green;
+      }
       &--advertising {
-        background-color: #a5b3ce;
+        background-color: $light-grey-blue;
       }
     }
     &__content {
