@@ -79,9 +79,21 @@
 .main-nav .main-menu__item {
   opacity: 0;
   transform: translateX(50px);
-  transition: .2s .3s ease;
 }
 .main-nav.main-nav--opened .main-menu__item {
   opacity: 1;
   transform: translateX(0);
+  transition: .2s .3s ease;
+  &:nth-child(2) {
+    transition-delay: .35s;
+  }
+  &:nth-child(3) {
+    transition-delay: .4s;
+  }
+  &:nth-child(4) {
+    transition-delay: .45s;
+  }
+  &:nth-child(5) {
+    transition-delay: .5s;
+  }
 }

@@ -15,7 +15,8 @@
     background-color: #fff;
     min-height: 62px;
     &__main-menu {
-      display: none;
+      // display: none;
+      position: absolute;  //Not work animation when use display: none TODO:
       padding-top: 90px;
       padding-left: 50px;
     }
