@@ -1,5 +1,6 @@
 (function($) {
   $(document).ready(function() {
+    const header = document.querySelector('.page-header');
     const navMain = document.querySelector('.main-nav');
     const navToggle = document.querySelector('.main-nav__toggle');
     const popupCall = document.querySelector('.popup-call');
@@ -21,9 +22,13 @@
       if (navMain.classList.contains('main-nav--closed')) {
         navMain.classList.remove('main-nav--closed');
         navMain.classList.add('main-nav--opened');
+        header.classList.add('page-header--opened');
+        header.classList.remove('page-header--closed');
       } else {
         navMain.classList.add('main-nav--closed');
         navMain.classList.remove('main-nav--opened');
+        header.classList.remove('page-header--opened');
+        header.classList.add('page-header--closed');
       }
     });
     navPhone.addEventListener('click', () => {

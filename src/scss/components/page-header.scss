@@ -1,4 +1,5 @@
 .page-header {
+  z-index: 1;
   display: flex;
   padding: 10px 0;
   width: 100%;
@@ -15,7 +16,7 @@
     min-height: 62px;
     &__main-menu {
       display: none;
-      padding-top: 60px;
+      padding-top: 90px;
       padding-left: 50px;
     }
   }
