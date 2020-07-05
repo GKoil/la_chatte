@@ -47,6 +47,9 @@
   .service-block {
     &__addition {
       background-color: $denim-blue;
+      &--advertising {
+        background-color: #a5b3ce;
+      }
     }
     &__content {
       padding-left: 6%;
