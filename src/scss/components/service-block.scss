@@ -1,4 +1,4 @@
-.development {
+.service-block {
   &__title-wrapper {
     display: flex;
     flex-wrap: nowrap;
@@ -22,7 +22,7 @@
   }
 }
 @media (max-width: $mobile-width-only) {
-  .development {
+  .service-block {
     &__content {
       background-color: $denim-blue;
       width: 100%;
@@ -44,7 +44,7 @@
   }
 }
 @media (min-width: $tablet-width) {
-  .development {
+  .service-block {
     &__addition {
       background-color: $denim-blue;
     }
