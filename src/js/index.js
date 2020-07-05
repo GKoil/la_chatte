@@ -138,6 +138,18 @@
         popupApplication.classList.add('popup-application--opened');
       }
     });
+    document.addEventListener('click', (e) => {
+      const isPopupActive = popupApplication.classList.contains('popup-application--opened');
+      const isClickOnInside = popupApplication.contains(e.target);
+      
+      if (e.target.classList.contains('form-send__send')) {
+        return;
+      }
+      if ( isPopupActive && !isClickOnInside) {
+        popupApplication.classList.remove('popup-application--opened');
+        popupApplication.classList.add('popup-application--closed');
+      }
+    });
 
   });
 })(jQuery)
