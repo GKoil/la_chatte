@@ -1,6 +1,6 @@
 .about {
   &__content {
-    z-index: -2;
+    // z-index: -2;
     @include before-mobile {
       background-color: $orange;
       width: 100%;
@@ -8,7 +8,7 @@
     }
   }
   &__content-list {
-    z-index: -1;
+    // z-index: -1;
     @include after-tablet {
       padding-left: 47px;
     }
@@ -39,7 +39,7 @@
   &__addition-project-count {
     @include after-tablet {
       @include adaptive-font(40px, 767px, 83.5px, 1920px);
-      font-weight: 700;
+      font-weight: 800;
       display: block;
     }
   }
@@ -47,6 +47,7 @@
     @include after-tablet {
       @include adaptive-font(20px, 767px, 41.5px, 1920px);
       text-transform: uppercase;
+      font-weight: 700;
     }
   }
 }
