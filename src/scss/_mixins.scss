@@ -72,3 +72,17 @@
     font-size: $max-font; //размер шрифта на $max-width и выше разрешении экрана
   }
 }
+
+// adaptive greed
+@mixin after-desktop {
+  @media (min-width: $desktop-width) { @content; }
+}
+@mixin after-tablet {
+  @media (min-width: $tablet-width) { @content; }
+}
+@mixin before-tablet {
+  @media (max-width: $tablet-width) { @content; }
+}
+@mixin before-mobile {
+  @media (max-width: $mobile-width-only) { @content; }
+}

@@ -1,4 +1,7 @@
 .night-mode {
+  @include before-mobile {
+    display: none;
+  }
   position: fixed;
   bottom: 20px;
   left: 82%;
@@ -6,7 +9,6 @@
   border-radius: 30px;
   width: 80px;
   height: 40px;
-  
   &__toggle {
     height: 100%;
     width: 100%;
@@ -17,9 +19,9 @@
     &::before {
       content: "";
       position: absolute;
-      height: 35px;
+      height: 36px;
       top: 2px;
-      width: 35px;
+      width: 36px;
       border-radius: 50%;
     }
 
@@ -37,10 +39,5 @@
         background-color: #fff;
       }
     }
-  }
-}
-@media (max-width: $mobile-width-only) {
-  .night-mode {
-    display: none;
   }
 }

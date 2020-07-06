@@ -1,5 +1,49 @@
 .main-menu {
   list-style: none;
+  @include after-tablet {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 40%;
+    max-width: 500px;
+  }
+  &__item {
+    @include before-mobile {
+      position: relative;
+      padding-left: 30px;
+      &::before {
+        content: '';
+        position: absolute;
+        top: 19px;
+        left: 0;
+        width: 20px;
+        height: 2px;
+        background-color: #fff;
+      }
+    }
+  }
+  &__item-link {
+    @include before-mobile {
+      font-size: 28px;
+      line-height: 40px;
+    }
+    @include after-tablet {
+      font-weight: 300;
+      @include adaptive-font(15px, 767px, 20px, 1920px);
+      line-height: 40px;
+      color: #a7a7a7;
+    }
+  }
+  &__item-link--current {
+    @include after-tablet {
+      color: #303030;
+    }
+  }
+  &__item--addition {
+    @include before-mobile {
+      display: none;
+    }
+  }
   &__item-link--addition {
     position: relative;
     width: 30px;
@@ -32,50 +76,6 @@
   }
 }
 
-@media (max-width: $mobile-width-only) {
-  .main-menu {
-    &__item {
-      position: relative;
-      padding-left: 30px;
-    }
-    &__item::before {
-      content: '';
-      position: absolute;
-      top: 19px;
-      left: 0;
-      width: 20px;
-      height: 2px;
-      background-color: #fff;
-    }
-    &__item-link {
-      font-size: 28px;
-      line-height: 40px;
-    }
-    &__item--addition {
-      display: none;
-    }
-  }
-}
-
-@media (min-width: $mobile-width-only) {
-  .main-menu {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    width: 40%;
-    max-width: 500px;
-    &__item-link {
-      font-weight: 300;
-      @include adaptive-font(15px, 767px, 20px, 1920px);
-      line-height: 40px;
-      color: #a7a7a7;
-    }
-    &__item-link--current {
-      color: #303030;
-    }
-  }
-  
-}
 .main-nav .main-menu__item {
   opacity: 0;
   transform: translateX(50px);

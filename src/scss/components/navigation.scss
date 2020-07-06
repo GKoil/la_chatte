@@ -4,6 +4,9 @@
   bottom: 0;
   height: 50vh;
   width: 50px;
+  @include before-tablet {
+    display: none;
+  }
   &--orange {
     background: $orange;
   }
@@ -31,10 +34,4 @@
     transform: rotate(180deg);
   }
   @include arrow;
-}
-
-@media (max-width: $tablet-width) {
-  .navigation {
-    display: none;
-  }
 }

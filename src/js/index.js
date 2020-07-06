@@ -32,7 +32,6 @@
       }
     });
     navPhone.addEventListener('click', () => {
-      console.log('click');
       if (popupCall.classList.contains('popup-call--closed')) {
         popupCall.classList.remove('popup-call--closed');
         popupCall.classList.add('popup-call--opened');

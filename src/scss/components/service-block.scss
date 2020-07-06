@@ -8,44 +8,52 @@
   &__content {
     flex-direction: column;
     justify-content: center;
+    @include before-mobile {
+      background-color: $denim-blue;
+      width: 100%;
+      color: #fff;
+    }
+    @include after-tablet {
+      padding-left: 6%;
+    }
+  }
+  &__title-wrapper {
+    @include before-mobile {
+      flex-wrap: wrap;
+    }
+    @include after-tablet {
+      margin-bottom: 170px;
+    }
   }
   &__title {
     @include adaptive-font(30px, 767px, 110px, 1920px);
     line-height: 1.05;
     font-family: "Futura PT Book";
+    @include before-mobile {
+      margin-bottom: 15px;
+    }
+    @include after-tablet {
+      max-width: 435px;
+    }
   }
   &__subtitle {
     line-height: 1.3;
     font-weight: 300;
     @include adaptive-font(16px, 767px, 20px, 1920px);
     color: $greyish;
+    @include before-mobile {
+      color: #fff;
+      margin-bottom: 15px;
+    }
+    @include after-tablet {
+      max-width: 573px;
+    }
   }
-}
-@media (max-width: $mobile-width-only) {
-  .service-block {
-    &__content {
-      background-color: $denim-blue;
-      width: 100%;
-      color: #fff;
-    }
-    &__title-wrapper {
-      flex-wrap: wrap;
-    }
-    &__title {
-      margin-bottom: 15px;
-    }
-    &__subtitle {
-      color: #fff;
-      margin-bottom: 15px;
-    }
-    &__addition {
+  &__addition {
+    @include before-mobile {
       display: none;
     }
-  }
-}
-@media (min-width: $tablet-width) {
-  .service-block {
-    &__addition {
+    @include after-tablet {
       &--development {
         background-color: $denim-blue;
       }
@@ -58,18 +66,6 @@
       &--advertising {
         background-color: $light-grey-blue;
       }
-    }
-    &__content {
-      padding-left: 6%;
-    }
-    &__title-wrapper {
-      margin-bottom: 170px;
-    }
-    &__title {
-      max-width: 435px;
-    }
-    &__subtitle {
-      max-width: 573px;
     }
   }
 }

@@ -44,6 +44,11 @@ body {
 main {
 	flex-grow: 1;
 }
+// Delete outline
+:active, :hover, :focus {
+	outline: 0;
+	outline-offset: 0;
+}
 // Hidden scroll-bar
 /* хром, сафари */
 :root::-webkit-scrollbar { width: 0; }

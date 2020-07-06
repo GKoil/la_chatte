@@ -1,29 +1,25 @@
 .about {
   &__content {
     z-index: -2;
-  }
-  &__content-list {
-    z-index: -1;
-  }
-}
-@media (max-width: $mobile-width-only) {
-  .about {
-    &__content {
+    @include before-mobile {
       background-color: $orange;
       width: 100%;
       padding-left: 20px;
     }
-    &__addition {
+  }
+  &__content-list {
+    z-index: -1;
+    @include after-tablet {
+      padding-left: 47px;
+    }
+  }
+  &__addition {
+    @include before-mobile {
       display: none;
     }
   }
-}
-@media (min-width: $tablet-width) {
-  .about {
-    &__content-list {
-      padding-left: 47px;
-    }
-    &__addition-work {
+  &__addition-work {
+    @include after-tablet {
       @include adaptive-font(40px, 767px, 107px, 1920px);
       display: block;
       transform: rotate(-90deg);
@@ -32,17 +28,23 @@
       line-height: 1.2;
       color: #fff;
     }
-    &__addition-projects {
+  }
+  &__addition-projects {
+    @include after-tablet {
       margin-top: 133px;
       line-height: 1;
       color: #fff;
     }
-    &__addition-project-count {
+  }
+  &__addition-project-count {
+    @include after-tablet {
       @include adaptive-font(40px, 767px, 83.5px, 1920px);
       font-weight: 700;
       display: block;
     }
-    &__addition-project-text {
+  }
+  &__addition-project-text { 
+    @include after-tablet {
       @include adaptive-font(20px, 767px, 41.5px, 1920px);
       text-transform: uppercase;
     }

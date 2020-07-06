@@ -5,6 +5,9 @@
   height: 80vh;
   position: fixed;
   top: 0;
+  @include after-tablet {
+    display: none;
+  }
   &__title {
     font-size: 20px;
     text-align: center;
@@ -14,11 +17,6 @@
     display: block;
   }
   &--closed {
-    display: none;
-  }
-}
-@media (min-width: $tablet-width) {
-  .popup-application {
     display: none;
   }
 }

@@ -1,4 +1,4 @@
-@media (min-width: $tablet-width) {
+@include after-tablet {
   .hint-scroll {
     position: fixed;
     left: 36%;

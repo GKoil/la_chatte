@@ -1,22 +1,22 @@
 .screen {
   display: flex;
   flex-wrap: wrap;
+  @include after-tablet {
+    display: flex;
+    flex-wrap: wrap;
+  }
   &__main {
     padding: 0 20px;
     display: flex;
     align-items: center;
-  }
-}
-@media (min-width: $tablet-width) {
-  .screen {
-    display: flex;
-    flex-wrap: wrap;
-    &__main {
+    @include after-tablet {
       padding-top: 82px;
       flex-basis: 70%;
       justify-content: center;
     }
-    &__addition {
+  }
+  &__addition {
+    @include after-tablet {
       padding-top: 82px;
       // padding-bottom: 60px;
       display: flex;
@@ -25,10 +25,14 @@
       justify-content: center;
       flex-basis: 30%;
     }
-    &__addition--orange {
+  }
+  &__addition--orange {
+    @include after-tablet {
       background-color: $orange;
     }
-    &__addition--blue {
+  }
+  &__addition--blue {
+    @include after-tablet {
       background-color: $denim-blue;
     }
   }

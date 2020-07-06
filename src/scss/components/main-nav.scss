@@ -2,6 +2,17 @@
   position: relative;
   width: 320px;
   margin: 0 auto;
+  @include after-tablet {
+    width: 100%;
+    margin: 0 auto;
+    margin-left: 3.5%;
+    margin-right: 5%;
+    max-width: 1920px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
   &__logo {
     width: 164px;
     text-align: center;
@@ -15,6 +26,9 @@
     width: 70px;
     height: 40px;
     border: none;
+    @include after-tablet {
+      display: none;
+    }
   }
   &__phone {
     position: absolute;
@@ -24,6 +38,21 @@
     height: 40px;
     background-color: #fff;
     border: none;
+    @include after-tablet {
+      position: relative;
+      width: 220px;
+      border-radius: 40px;
+      min-height: 69px;
+      font: 18px/1 "Futura PT Book";
+      box-shadow: 0 8px 49px 0 rgba(255,255,255,.36);
+    }
+  }
+  &__phone-number {
+    @include after-tablet {
+      font-size: 18px;
+      line-height: 18px;
+      color: #000;
+    }
   }
   &__phone-icon-button {
     width: 40px;
@@ -37,11 +66,31 @@
   }
   &__phone-text span {
     display: none;
+    @include after-tablet {
+      display: block;
+      text-align: left;
+    }
   }
   &__phone-text {
     position: relative;
     padding-left: 40px;
     min-height: 40px;
+    @include after-tablet {
+      margin-top: 14px;
+      max-width: 200px;
+      margin-left: auto;
+      padding: 5px 0 5px 55px;
+    }
+  }
+  &__phone-text-button {
+    @include after-tablet {
+      font-size: 16px;
+      line-height: 16px;
+      color: #a7a7a7;
+      border: none;
+      background: transparent;
+      padding: 0;
+    }
   }
   &__phone-text::before {
     content: "";
@@ -218,53 +267,5 @@
   100% {
     opacity: 1;
     transform: rotate(45deg);
-  }
-}
-@media (min-width: $mobile-width-only) {
-  .main-nav {
-    width: 100%;
-    margin: 0 auto;
-    margin-left: 3.5%;
-    margin-right: 5%;
-    max-width: 1920px;
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    &__phone {
-      position: relative;
-      width: 220px;
-      border-radius: 40px;
-      min-height: 69px;
-      font: 18px/1 "Futura PT Book";
-      box-shadow: 0 8px 49px 0 rgba(255,255,255,.36);
-    }
-    &__phone-text {
-      margin-top: 14px;
-      max-width: 200px;
-      margin-left: auto;
-      padding: 5px 0 5px 55px;
-    }
-    &__phone-text span {
-      display: block;
-      text-align: left;
-    }
-    &__phone-number {
-      font-size: 18px;
-      line-height: 18px;
-      color: #000;
-    }
-
-    &__phone-text-button {
-      font-size: 16px;
-      line-height: 16px;
-      color: #a7a7a7;
-      border: none;
-      background: transparent;
-      padding: 0;
-    }
-  }
-  .main-nav__toggle {
-    display: none;
   }
 }
