@@ -37,16 +37,16 @@
     &:hover::before {
       content: "";
       position: absolute;
-      right: -30px;
-      top: 45%;
+      right: -25px;
+      top: 58%;
       width: 20px;
       height: 10px;
       background-color: #000;
     }
     &:hover::after{
       content: "";
-      right: -50px;
-      top: 37%;
+      right: -49px;
+      top: 52.5%;
       position: absolute;
       border-style: solid;
       border-width: 12px;
