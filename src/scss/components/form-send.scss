@@ -15,7 +15,7 @@
     margin-bottom: 15px;
     border-bottom: solid 1px #d4d4d4;
     &--development {
-      width: 50%;
+      width: 48%;
       max-width: 361px;
     }
     &--popup {
@@ -24,6 +24,12 @@
       font-weight: 300;
       font-family: "Futura PT";
       margin: 0;
+    }
+    &--popup-addition {
+      padding-bottom: 0;
+      height: 52px;
+      margin-bottom: 4px;
+      color: var(--menu-gray);
     }
   }
   &__link {
@@ -49,6 +55,11 @@
       font-family: "Futura PT";
       font-weight: 500;
       margin-bottom: 15px;
+    }
+    &--popup--addition {
+      margin-left: 0;
+      margin-top: 15px;
+      display: block;
     }
   }
   &__button-send {
@@ -82,9 +93,7 @@
   }
   &__item-wrapper-name {
     padding-right: 20px;
-  }
-  &__item-wrapper:nth-child(-n+2) {
-    margin-bottom: 60px;
+    margin-bottom: 7.6%;
   }
   &__item-wrapper--screen {
     @include before-mobile {

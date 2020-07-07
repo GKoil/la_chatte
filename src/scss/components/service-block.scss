@@ -9,7 +9,7 @@
       flex-wrap: wrap;
     }
     @include after-tablet {
-      margin-bottom: 142px;
+      margin-bottom: 13.2%;
     }
   }
   &__content {
@@ -28,8 +28,8 @@
     @include after-tablet {
       width: 100%;
       max-width: 83%;
-      margin-top: 129px;
-      margin-left: 49px;
+      margin-top: 10%;
+      margin-left: 4%;
     }
   }
   &__title {
@@ -69,7 +69,7 @@
         background-color: var(--main-blue);
       }
       &--design {
-        background-color: var(--main-light-grey);
+        background-color: var(--main-charcoal);
       }
       &--support {
         background-color: var(--main-green);

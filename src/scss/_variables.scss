@@ -11,12 +11,15 @@ $retina-dppx: 1.5dppx;
   --main-orange: #f46e60;
   --main-green: #83ca54;
   --main-blue: #34538b;
+  --menu-gray: #a7a7a7;
   --main-light-grey: #a0b4d0;
   --main-charcoal-gray: #3d4041;
 }
 // blocks colors
 .main-nav {
-  --menu-gray: #a7a7a7;
+  --menu-black: #000;
+}
+.popup-addition__menu {
   --menu-black: #000;
 }
 .night-mode {

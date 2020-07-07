@@ -28,8 +28,14 @@
   &__menu-list-item-link {
     color: var(--menu-gray);
     font: 25px "Futura PT Book";
-    display: block;
+    display: inline-block;
     margin-bottom: 15px;
+    color: var(--menu-gray);
+    transition: all .3s linear;
+    &:hover {
+      color: var(--manu-black);
+      transition: all .3s linear;
+    }
   }
 }
 .popup-addition--closed {

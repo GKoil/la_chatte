@@ -58,3 +58,7 @@ main {
 
 /* фф (свойство больше не работает, других способов тоже нет)*/
 :root { overflow: -moz-scrollbars-none; }
+
+input[type="text"]::placeholder { 
+	color: var(--main-gray); 
+} 

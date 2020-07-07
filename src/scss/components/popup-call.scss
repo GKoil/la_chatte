@@ -14,7 +14,9 @@
     line-height: 1.3;
     padding: 40px 0 20px; 
     color: var(--main-black);
-    // margin-bottom: 15px;
+    @include after-tablet {
+      padding: 40px 0 10px;
+    }
   }
   &__form {
     padding: 0 40px;
