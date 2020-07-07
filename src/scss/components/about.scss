@@ -1,6 +1,5 @@
 .about {
   &__content {
-    // z-index: -2;
     @include before-mobile {
       background-color: $orange;
       width: 100%;
@@ -8,9 +7,7 @@
     }
   }
   &__content-list {
-    // z-index: -1;
     @include after-tablet {
-      // padding-left: 47px;
     }
   }
   &__addition {
@@ -23,6 +20,9 @@
       @include adaptive-font(40px, 767px, 107px, 1920px);
       display: block;
       transform: rotate(-90deg);
+      width: 100%;
+      position: absolute;
+      top: calc(59% - 262px);
       font-weight: 500;
       max-width: 525px;
       line-height: 1.2;
@@ -31,9 +31,10 @@
   }
   &__addition-projects {
     @include after-tablet {
-      margin-top: 133px;
       line-height: 1;
       color: #fff;
+      position: absolute;
+      bottom: calc(25% - 92px);
     }
   }
   &__addition-project-count {

@@ -25,9 +25,9 @@
     }
   }
   &__content-wrapper {
-    @include after-desktop {
+    @include after-tablet {
       width: 100%;
-      max-width: 1072px;
+      max-width: 83%;
       margin-top: 129px;
       margin-left: 49px;
     }
