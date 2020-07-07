@@ -31,6 +31,9 @@
       margin-top: 10%;
       margin-left: 4%;
     }
+    @include after-desktop {
+      margin-top: 5.5%;
+    }
   }
   &__title {
     @include adaptive-font(30px, 767px, 110px, 1920px);
