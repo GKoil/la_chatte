@@ -1,7 +1,7 @@
 .about {
   &__content {
     @include before-mobile {
-      background-color: $orange;
+      background-color: var(--main-orange);
       width: 100%;
       padding-left: 20px;
     }
@@ -26,13 +26,13 @@
       font-weight: 500;
       max-width: 525px;
       line-height: 1.2;
-      color: #fff;
+      color: var(--main-white);
     }
   }
   &__addition-projects {
     @include after-tablet {
       line-height: 1;
-      color: #fff;
+      color: var(--main-white);
       position: absolute;
       bottom: calc(25% - 92px);
     }

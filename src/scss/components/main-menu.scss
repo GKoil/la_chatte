@@ -19,14 +19,14 @@
         left: 0;
         width: 20px;
         height: 2px;
-        background-color: #fff;
+        background-color: var(--main-white);
       }
     }
   }
   &__item-link {
     font-weight: 300;
     @include before-mobile {
-      color: #fff;
+      color: var(--main-white);
       font-size: 28px;
       line-height: 40px;
     }
@@ -34,12 +34,12 @@
       font-weight: 300;
       @include adaptive-font(15px, 767px, 20px, 1920px);
       line-height: 40px;
-      color: #a7a7a7;
+      color: var(--menu-gray);
     }
   }
   &__item-link--current {
     @include after-tablet {
-      color: #303030;
+      color: var(--menu-black);
     }
   }
   &__item--addition {
@@ -52,7 +52,7 @@
     width: 30px;
     height: 30px;
     border: none;
-    background-color: #fff;
+    background-color: var(--main-white);
     top: 5px;
   }
   &__item-link--addition::before {
@@ -62,12 +62,12 @@
     left: 0;
     width: 30px;
     height: 30px;
-    background-color: $orange;
+    background-color: var(--main-orange);
     border-radius: 50%;
   }
   &__item-link--addition::after {
     content: "...";
-    color: #fff;
+    color: var(--main-white);
     position: absolute;
     left: 7px;
     top: -10px;

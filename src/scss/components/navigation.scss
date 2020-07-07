@@ -9,10 +9,10 @@
     display: none;
   }
   &--orange {
-    background: $orange;
+    background: var(--main-orange);
   }
   &__number {
-    color: #fff;
+    color: var(--main-white);
     text-align: center;
     font: 26px/50vh "Futura PT Book";
     display: block;

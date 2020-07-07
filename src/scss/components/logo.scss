@@ -1,5 +1,6 @@
 .logo {
-  font-size: 42px;
+  // font-size: 42px;
+  @include adaptive-font(32px, $mobile-width-only, 42px, $desktop-width);
   line-height: 42px;
   &__text--main,
   &__text--scroll {
@@ -8,11 +9,11 @@
     top: 0;
   }
   &__first {
-    color: #f46e60;
+    color: var(--main-orange);
     font-weight: 900;
   }
   &__second {
-    color: #000;
+    color: var(--main-black);
     font-weight: 500;
   }
 }

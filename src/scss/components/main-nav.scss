@@ -1,6 +1,6 @@
 .main-nav {
   position: relative;
-  width: 320px;
+  width: 100%;
   margin: 0 auto;
   @include after-tablet {
     width: 100%;
@@ -16,6 +16,11 @@
   &__logo {
     width: 164px;
     text-align: center;
+    @include before-mobile {
+      display: block;
+      margin-left: 46px;
+      max-width: 170px;
+    }
   }
   &__toggle {
     position: absolute;
@@ -34,14 +39,15 @@
     position: absolute;
     top: 0;
     right: 0;
-    width: 40px;
-    height: 40px;
-    background-color: #fff;
+    width: 45px;
+    height: 45px;
+    background-color: var(--main-white);
     border: none;
+    @include before-mobile {
+      margin-right: 10px;
+      background-color: transparent;
+    }
     @include after-tablet {
-      // TODO: Delete!
-      margin-top: 3px;
-      // 
       position: relative;
       width: 240px;
       border-radius: 40px;
@@ -54,12 +60,12 @@
     @include after-tablet {
       font-size: 18px;
       line-height: 18px;
-      color: #000;
+      color: var(--main-black);
     }
   }
   &__phone-icon-button {
-    width: 40px;
-    height: 40px;
+    width: 45px;
+    height: 45px;
     background-color: transparent;
     border: none;
     position: absolute;
@@ -76,8 +82,8 @@
   }
   &__phone-text {
     position: relative;
-    padding-left: 40px;
-    min-height: 40px;
+    padding-left: 45px;
+    min-height: 45px;
     @include after-tablet {
       margin-top: 14px;
       max-width: 200px;
@@ -89,7 +95,7 @@
     @include after-tablet {
       font-size: 14px;
       line-height: 16px;
-      color: #a7a7a7;
+      color: var(--menu-gray);
       border: none;
       background: transparent;
       padding: 0;
@@ -97,7 +103,7 @@
   }
   &__phone-text::before {
     content: "";
-    background-color: #f46e60;
+    background-color: var(--main-orange);
     height: 44px;
     width: 44px;
     border-radius: 50%;
@@ -116,8 +122,8 @@
     background-repeat: no-repeat;
   }
 }
-@media (max-width: $mobile-width-only) {
-  .main-nav--opened .main-menu {
+.main-nav--opened .main-menu {
+  @include before-mobile {
     display: block;
     top: 0;
     left: 0;
@@ -129,16 +135,18 @@
     animation-name: nav-mobile;
     animation-duration: 1s;
     transition: 1s;
-  }
-  @keyframes nav-mobile {
-    0% {
-      opacity: 0;
+    @keyframes nav-mobile {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
     }
-    100% {
-      opacity: 1;
-    }
   }
-  .page-header--opened ~ .page-main {
+}
+.page-header--opened ~ .page-main {
+  @include before-mobile {
     animation-name: body-size-small;
     animation-duration: 1s;
   }
@@ -154,6 +162,8 @@
       opacity: 0;
     }
   }
+}
+@media (max-width: $mobile-width-only) {
   .page-header--closed ~ .page-main {
     animation-name: body-size-big;
     animation-duration: 0.7s;
@@ -169,11 +179,6 @@
     }
   }
   .main-nav {
-    &__logo {
-      display: block;
-      margin: 0 auto;
-      max-width: 170px;
-    }
     &__phone-number {
       display: none;
     }
@@ -184,12 +189,12 @@
   .main-nav--closed .main-nav__toggle::before {
     content: "";
     position: absolute;
-    top: 12px;
+    top: 17px;
     left: 17px;
-    width: 36px;
+    width: 30px;
     height: 2px;
-    background-color: #000;
-    box-shadow: 0 8px 0 0 #000;
+    background-color: var(--main-black);
+    box-shadow: 0 5px 0 0 var(--main-black);
     animation-name: menu-open-rotate-left;
     animation-duration: 1s;
   }
@@ -198,9 +203,9 @@
     position: absolute;
     bottom: 10px;
     left: 17px;
-    width: 36px;
+    width: 30px;
     height: 2px;
-    background-color: #000;
+    background-color: var(--main-black);
     animation-name: menu-open-rotate-right;
     animation-duration: 1s;
   }
@@ -208,24 +213,24 @@
     0% {
       opacity: 0;
       transform: rotate(45deg);
-      background-color: #fff;
+      background-color: var(--main-white);
     }
     100% {
       opacity: 1;
       transform: rotate(0deg);
-      background-color: #000;
+      background-color: var(--main-black);
     }
   }
   @keyframes menu-open-rotate-right {
     0% {
       opacity: 0;
       transform: rotate(-45deg);
-      background-color: #fff;
+      background-color: var(--main-white);
     }
     100% {
       opacity: 1;
       transform: rotate(0deg);
-      background-color: #000;
+      background-color: var(--main-black);
     }
   }
   .main-nav--opened .main-nav__toggle::before, 
@@ -238,7 +243,7 @@
     height: 2px;
     box-shadow: none;
     z-index: 2;
-    background-color: #fff;
+    background-color: var(--main-white);
     transition: 2s;
   }
   .main-nav--opened .main-nav__toggle::before {

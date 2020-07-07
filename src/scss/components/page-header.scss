@@ -6,8 +6,9 @@
   max-width: 1920px;
   position: fixed;
   @include before-mobile {
-    background-color: #fff;
+    background-color: var(--main-white);
     min-height: 62px;
+    padding: 10px 0;
   }
   &__main-menu {
     margin: 0;
@@ -17,6 +18,7 @@
       position: absolute;  //Not work animation when use display: none TODO:
       padding-top: 90px;
       padding-left: 50px;
+      z-index: -1;
     }
   }
 }

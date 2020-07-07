@@ -5,7 +5,7 @@
   &__item-link {
     text-transform: lowercase;
     text-decoration: underline;
-    color: #fff;
+    color: var(--main-white);
     @include adaptive-font(18px, 767px, 42px, 1920px);
     line-height: 1.55;
     font-family: "Futura PT Book";

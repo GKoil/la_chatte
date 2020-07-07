@@ -5,12 +5,20 @@ $retina-dpi: 144dpi;
 $retina-dppx: 1.5dppx;
 
 // main colors 
-$orange: #f46e60;
-$green: #83ca54;
-$light-grey-blue: #a0b4d0;
-$denim-blue: #34538b;
-$black: #303030;
-$black-two: #141414;
-$greyish: #a7a7a7;
-$charcoal-grey: #3d4041;
-$night-button: #333333;
+:root {
+  --main-black: #303030;
+  --main-white: #fff;
+  --main-orange: #f46e60;
+  --main-green: #83ca54;
+  --main-blue: #34538b;
+  --main-light-grey: #a0b4d0;
+  --main-charcoal-gray: #3d4041;
+}
+// blocks colors
+.main-nav {
+  --menu-gray: #a7a7a7;
+  --menu-black: #000;
+}
+.night-mode {
+  --night-mode-black: #333333;
+}

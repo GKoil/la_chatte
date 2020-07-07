@@ -26,12 +26,12 @@
   }
   &__addition--orange {
     @include after-tablet {
-      background-color: $orange;
+      background-color: var(--main-orange);
     }
   }
   &__addition--blue {
     @include after-tablet {
-      background-color: $denim-blue;
+      background-color: var(--main-blue);
     }
   }
 }

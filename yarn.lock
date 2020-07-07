@@ -6131,7 +6131,7 @@ through2-filter@^3.0.0:
 
 through2@2.0.3:
   version "2.0.3"
-  resolved "https://registry.yarnpkg.com/through2/-/through2-2.0.3.tgz#0004569b37c7c74ba39c43f3ced78d1ad94140be"
+  resolved "https://registry.yarnpkg.com/through2/-/through2-2.0.3.tgzvar(--main-black)4569b37c7c74ba39c43f3ced78d1ad94140be"
   integrity sha1-AARWmzfHx0ujnEPzzteNGtlBQL4=
   dependencies:
     readable-stream "^2.1.5"

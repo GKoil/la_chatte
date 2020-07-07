@@ -1,8 +1,8 @@
 @mixin icon-close {
   &__closed {
     position: absolute;
-    top: 5px;
-    right: 5px;
+    top: 18px;
+    right: 20px;
     cursor: pointer;
     width: 30px;
     height: 30px;
@@ -16,7 +16,7 @@
       right: 0;
       width: 30px;
       height: 2px;
-      background-color: #000;
+      background-color: var(--main-black);
       box-shadow: none;
     }
     &::before {
@@ -30,7 +30,7 @@
 @mixin arrow {
   &__button-inner {
     width: 2px;
-    background: #fff;
+    background: var(--main-white);
     height: 100%;
     max-height: 106px;
     margin: 0 auto;
@@ -40,7 +40,7 @@
       content: "";
       width: 2px;
       height: 10px;
-      background: #fff;
+      background: var(--main-white);
     }
     &::before {
       transform: rotate(-45deg);

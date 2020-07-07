@@ -26,17 +26,17 @@
     }
 
     &--off {
-      background-color: #fff;
+      background-color: var(--main-white);
       &::before {
         left: 2px;
-        background-color: $orange;
+        background-color: var(--main-orange);
       }
     }
     &--on {
-      background-color: $night-button;
+      background-color: var(--night-mode-black);
       &::before {
         right: 2px;
-        background-color: #fff;
+        background-color: var(--main-white);
       }
     }
   }

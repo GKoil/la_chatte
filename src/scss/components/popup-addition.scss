@@ -4,7 +4,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #fff;
+  background-color: var(--main-white);
   z-index: 10;
 
   @include icon-close;
@@ -26,7 +26,7 @@
     padding: 0;
   }
   &__menu-list-item-link {
-    color: #a7a7a7;
+    color: var(--menu-gray);
     font: 25px "Futura PT Book";
     display: block;
     margin-bottom: 15px;
