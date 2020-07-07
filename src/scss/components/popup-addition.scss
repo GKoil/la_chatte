@@ -17,9 +17,9 @@
     height: 100vh;
   }
   &__menu {
-    background-color: #f5f5f5;
+    background-color: var(--menu-white);
     padding: 40px;
-  } 
+  }
   &__menu-list {
     list-style: none;
     margin: 0;

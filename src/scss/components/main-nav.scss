@@ -131,7 +131,7 @@
     bottom: 0;
     z-index: 1;
     position: fixed;
-    background: linear-gradient(227deg,#252321,#161515);
+    background: linear-gradient(227deg,var(--menu-popup-black-light),var(--menu-popup-black));
     animation-name: nav-mobile;
     animation-duration: 1s;
     transition: 1s;
@@ -163,78 +163,86 @@
     }
   }
 }
-@media (max-width: $mobile-width-only) {
-  .page-header--closed ~ .page-main {
+.page-header--closed ~ .page-main {
+  @include before-mobile {
     animation-name: body-size-big;
     animation-duration: 0.7s;
   }
-  @keyframes body-size-big {
-    0% {
-      transform: scale(0.7);
-      opacity: 0;
-    }
-    100% {
-      transform: scale(1);
-      opacity: 1;
-    }
+}
+@keyframes body-size-big {
+  0% {
+    transform: scale(0.7);
+    opacity: 0;
   }
-  .main-nav {
-    &__phone-number {
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+.main-nav {
+  &__phone-number {
+    @include before-mobile {
       display: none;
     }
-    &__phone-text-button {
+  }
+  &__phone-text-button {
+    @include before-mobile {
       display: none;
     }
   }
-  .main-nav--closed .main-nav__toggle::before {
+}
+.main-nav--closed .main-nav__toggle::before,
+.main-nav--closed .main-nav__toggle::after {
+  @include before-mobile {
     content: "";
     position: absolute;
+    left: 17px;
+    width: 30px;
+    height: 2px;
+    background-color: var(--main-black);
+    animation-duration: 1s;
+  }
+}
+.main-nav--closed .main-nav__toggle::before {
+  @include before-mobile {
     top: 17px;
-    left: 17px;
-    width: 30px;
-    height: 2px;
-    background-color: var(--main-black);
-    box-shadow: 0 5px 0 0 var(--main-black);
     animation-name: menu-open-rotate-left;
-    animation-duration: 1s;
+    box-shadow: 0 5px 0 0 var(--main-black);
   }
-  .main-nav--closed .main-nav__toggle::after {
-    content: "";
-    position: absolute;
+}
+.main-nav--closed .main-nav__toggle::after {
+  @include before-mobile {
     bottom: 10px;
-    left: 17px;
-    width: 30px;
-    height: 2px;
-    background-color: var(--main-black);
     animation-name: menu-open-rotate-right;
-    animation-duration: 1s;
   }
-  @keyframes menu-open-rotate-left {
-    0% {
-      opacity: 0;
-      transform: rotate(45deg);
-      background-color: var(--main-white);
-    }
-    100% {
-      opacity: 1;
-      transform: rotate(0deg);
-      background-color: var(--main-black);
-    }
+}
+@keyframes menu-open-rotate-left {
+  0% {
+    opacity: 0;
+    transform: rotate(45deg);
+    background-color: var(--main-white);
   }
-  @keyframes menu-open-rotate-right {
-    0% {
-      opacity: 0;
-      transform: rotate(-45deg);
-      background-color: var(--main-white);
-    }
-    100% {
-      opacity: 1;
-      transform: rotate(0deg);
-      background-color: var(--main-black);
-    }
+  100% {
+    opacity: 1;
+    transform: rotate(0deg);
+    background-color: var(--main-black);
   }
-  .main-nav--opened .main-nav__toggle::before, 
-  .main-nav--opened .main-nav__toggle::after {
+}
+@keyframes menu-open-rotate-right {
+  0% {
+    opacity: 0;
+    transform: rotate(-45deg);
+    background-color: var(--main-white);
+  }
+  100% {
+    opacity: 1;
+    transform: rotate(0deg);
+    background-color: var(--main-black);
+  }
+}
+.main-nav--opened .main-nav__toggle::before, 
+.main-nav--opened .main-nav__toggle::after {
+  @include before-mobile {
     content: "";
     position: absolute;
     top: 20px;
@@ -246,12 +254,16 @@
     background-color: var(--main-white);
     transition: 2s;
   }
-  .main-nav--opened .main-nav__toggle::before {
+}
+.main-nav--opened .main-nav__toggle::before {
+  @include before-mobile {
     transform: rotate(45deg);
     animation-name: menu-close-rotate-left;
     animation-duration: 1s;
   }
-  .main-nav--opened .main-nav__toggle::after {
+}
+.main-nav--opened .main-nav__toggle::after {
+  @include before-mobile {
     transform: rotate(135deg);
     animation-name: menu-close-rotate-right;
     animation-duration: 1s;

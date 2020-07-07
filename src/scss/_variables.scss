@@ -19,8 +19,17 @@ $retina-dppx: 1.5dppx;
 .main-nav {
   --menu-black: #000;
 }
+.main-menu {
+  --menu-popup-black: #161515;
+  --menu-popup-black-light: #252321;
+}
 .popup-addition__menu {
   --menu-black: #000;
+  --menu-white: #f5f5f5;
+}
+.form-send {
+  --field-border-gray: #d4d4d4;
+  --link-blue: #3c6db2;
 }
 .night-mode {
   --night-mode-black: #333333;
