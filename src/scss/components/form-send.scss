@@ -39,8 +39,7 @@
     font-weight: 300;
     line-height: 1.22;
     @include adaptive-font (14px, 320px, 18px, 1920px);
-    margin-top: 10px;
-    margin-left: 5px;
+    margin: 10px 0 10px 5px;
     display: block;
     &--development {
       max-width: 240px;
