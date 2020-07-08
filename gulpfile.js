@@ -101,7 +101,7 @@ function spriteIcons() {
 		imgName: 'sprite@1x.png',
 		// retinaImgName: 'sprite@2x.png', 
     cssName: 'sprite.scss',
-    imgPath: '../../images/sprite@1x.png', //Путь, прописываемый в файле scss изображениям
+    imgPath: '../images/sprite@1x.png', //Путь, прописываемый в файле scss изображениям
 		// retinaImgPath: '../../images/sprite@2x.png'
 		}));
   return spriteData.img.pipe(gulp.dest('src/images/')), // Путь, куда сохраняем картинку
