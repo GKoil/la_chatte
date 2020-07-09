@@ -3,10 +3,11 @@
     position: fixed;
     left: 36%;
     bottom: 40px;
-    height: 72px;
-    width: 41px;
+    height: 53px;
+    width: 40px;
     cursor: pointer;
-    
+    border: 3px solid var(--scroll-black);
+    border-radius: 20px;
     &--on {
       display: block;
     }
@@ -14,35 +15,41 @@
       display: none;
     }
     &::after {
-      content: "";
       position: absolute;
-      top: 0;
-      left: 0;
-      @include sprite($mouse-gray);
+      content: '';
+      top: 100%;
+      left: 50%;
+      width: 14px;
+      height: 14px;
+      border-right: 3px solid;
+      border-bottom: 3px solid;
+      transform: rotate(45deg);
+      animation: moveDown 1s linear 0s infinite;
     }
     @keyframes moveDown {
       0% {
-        transform:translateY(0);
+        transform:rotate(45deg) translate(0, 9px);
         opacity:0;
       }
       50% {
-        transform:translateY(5px);
+        transform:rotate(45deg) translate(3px, 12px);
         opacity:.5;
       }
       100% {
-        transform:translateY(10px);
+        transform:rotate(45deg) translate(9px, 18px);
         opacity:.1;
       }
     }
     &::before {
-      content: "";
-      width: 14px;
-      height: 18px;
       position: absolute;
-      bottom: 0;
-      left: 13px;
-      @include sprite($mouse_arr);
-      animation: moveDown 1s linear 0s infinite;
+      content: '';
+      top: 10px;
+      left: 50%;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--scroll-black);
+      transform: translateX(-50%);
     }
   }
 }
