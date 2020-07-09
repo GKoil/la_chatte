@@ -4,7 +4,8 @@
   }
   position: fixed;
   bottom: 20px;
-  left: 85%;
+  left: 87.2%;
+  transform: translateX(-50%);
   box-shadow: 0 -8px 49px 0 rgba(255,255,255,.36);
   border-radius: 30px;
   width: 80px;
@@ -15,7 +16,6 @@
     border-radius: 30px;
     border: none;
     position: relative;
-
     &::before {
       content: "";
       position: absolute;
@@ -24,7 +24,6 @@
       width: 36px;
       border-radius: 50%;
     }
-
     &--off {
       background-color: var(--main-white);
       &::before {

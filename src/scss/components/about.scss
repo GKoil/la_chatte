@@ -34,7 +34,9 @@
       line-height: 1;
       color: var(--main-white);
       position: absolute;
-      bottom: calc(23.5% - 92px);
+      // bottom: calc(23.5% - 92px);
+      bottom: 18%;
+      transform: translateY(50%);
     }
   }
   &__addition-project-count {
