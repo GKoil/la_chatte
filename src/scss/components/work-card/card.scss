@@ -1,0 +1,25 @@
+.card {
+  &__title {
+    @include adaptive-font(14px, 767px, 82.5px, 1920px);
+    font-weight: 600;
+    line-height: 1;
+    color: var(--main-black);
+    padding-bottom: 49px;
+    border-bottom: 4px solid var(--main-peach);
+    margin-bottom: 76px;
+  }
+  &__subtitle {
+    @include adaptive-font(12px, 767px, 30px, 1920px);
+    font-weight: normal;
+    line-height: 1.2;
+    color: var(--main-black);
+    display: block;
+    margin-bottom: 85px;
+  }
+  &__link {
+    @include adaptive-font(12px, 767px, 30px, 1920px);
+    font-weight: 600;
+    line-height: 2.2;
+    color: var(--main-peach);
+  }
+}

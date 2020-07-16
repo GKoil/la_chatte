@@ -1,0 +1,25 @@
+.services {
+  &__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  &__list-item {
+    padding: 104px 40px 94px 40px;
+    border-radius: 20px;
+    box-shadow: -17.3px 16.7px 70px 0 rgba(0, 0, 0, 0.06);
+    max-width: 563px;
+    margin-bottom: 51px;
+    &:not(:last-child) {
+      margin-right: 45px;
+    }
+    &:hover {
+      border-radius: 20px;
+      box-shadow: -39.6px 38.2px 136px 0 rgba(0, 0, 0, 0.39);
+      background-color: var(--services-black);
+    }
+  }
+  &__list-item-card {}
+}

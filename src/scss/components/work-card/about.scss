@@ -1,0 +1,73 @@
+.about {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  @include before-mobile {
+    display: block;
+  }
+  &__aside {
+    max-width: 780px;
+    flex-basis: 45%;
+  }
+  &__aside-title {
+    @include adaptive-font(28px, 767px, 100.5px, 1920px);
+    line-height: 1;
+    font-weight: normal;
+    color: var(--main-black);
+    margin-bottom: 52px;
+  }
+  &__aside-description {
+    @include adaptive-font(14px, 767px, 19.5px, 1920px);
+    font-weight: normal;
+    line-height: 1.74;
+    color: var(--main-black);
+  }
+  &__sale {
+    background: center/cover no-repeat url('../images/work-card-sale.jpg') var(--main-black);
+    padding: 54px 0;
+    padding-left: 113px;
+    padding-right: 113px;
+    flex-basis: 50%;
+    max-width: 890px;
+  }
+  &__sale-title {
+    @include adaptive-font(20px, 767px, 82.5px, 1920px);
+    font-weight: normal;
+    line-height: 1;
+    color: var(--main-white);
+    max-width: 406px;
+    display: block;
+  }
+  &__sale-link {
+    font-size: 30px;
+    @include adaptive-font(12px, 767px, 30px, 1920px);
+    font-weight: normal;
+    line-height: 2.2;
+    padding-right: 61px;
+    color: var(--main-peach);
+    position: relative;
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      right: 0;
+    }
+    &::before {
+      height: 1px;
+      width: 42px;
+      width: 31%;
+      top: 59%;
+      background: var(--main-peach);
+      transform: translateY(-50%); 
+    }
+    &::after {
+      width: 8%;
+      height: 29%;
+      top: 45%;
+      transform: translateY(-50%); 
+      border-top: 1px solid var(--main-peach);
+      border-right: 1px solid var(--main-peach);
+      transform: rotate(45deg);
+    }
+  }
+}

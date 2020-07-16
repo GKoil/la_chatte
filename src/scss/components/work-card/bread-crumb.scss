@@ -1,0 +1,32 @@
+.bread-crumb {
+  &__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  &__list-item {
+    padding-right: 54px;
+    @include adaptive-font(14px, 767px, 20px, 1920px);
+    font-weight: 400;
+    position: relative;
+    &:not(:last-child)::after {
+      content: "";
+      position: absolute;
+      width: 11px;
+      height: 11px;
+      right: 24px;
+      top: 7px;
+      border-top: 1px solid var(--main-black);
+      border-right: 1px solid var(--main-black);
+      transform: rotate(45deg);
+    }
+  }
+  &__list-item-link {
+    color: var(--main-black);
+    &--main {
+      color: var(--main-blue);
+    }
+  }
+}

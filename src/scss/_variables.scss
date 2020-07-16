@@ -5,7 +5,7 @@ $retina-dpi: 144dpi;
 $retina-dppx: 1.5dppx;
 
 // main colors 
-:root {
+.main-body {
   --main-black: #303030;
   --main-white: #fff;
   --main-orange: #f46e60;
@@ -36,4 +36,14 @@ $retina-dppx: 1.5dppx;
 }
 .hint-scroll {
   --scroll-black: #000;
+}
+
+.work-card-body {
+  --main-white: #fff;
+  --main-black: #333;
+  --main-blue: #2c55b0;
+  --main-peach: #d86e61;
+}
+.services {
+  --services-black: #000;
 }

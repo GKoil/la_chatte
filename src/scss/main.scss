@@ -14,20 +14,26 @@
 
 
 // Components styles
-@import "components/page-header";
-@import "components/logo";
-@import "components/main-menu";
-@import "components/main-nav";
-@import "components/popup-call";
-@import "components/popup-addition";
-@import "components/page-main";
-@import "components/services-list";
-@import "components/navigation";
-@import "components/night-mode";
-@import "components/screen";
-@import "components/about";
-@import "components/service-block";
-@import "components/addition-nav";
-@import "components/form-send";
-@import "components/hint-scroll";
-@import "components/popup-application";
+@import "components/index/page-header";
+@import "components/index/logo";
+@import "components/index/main-menu";
+@import "components/index/main-nav";
+@import "components/index/popup-call";
+@import "components/index/popup-addition";
+@import "components/index/page-main";
+@import "components/index/services-list";
+@import "components/index/navigation";
+@import "components/index/night-mode";
+@import "components/index/screen";
+@import "components/index/about";
+@import "components/index/service-block";
+@import "components/index/addition-nav";
+@import "components/index/form-send";
+@import "components/index/hint-scroll";
+@import "components/index/popup-application";
+
+@import "components/work-card/page-work-card.scss";
+@import "components/work-card/bread-crumb.scss";
+@import "components/work-card/about.scss";
+@import "components/work-card/services.scss";
+@import "components/work-card/card.scss";
