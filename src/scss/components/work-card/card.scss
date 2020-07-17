@@ -1,25 +1,32 @@
 .card {
+  color: var(--main-black);
   &__title {
-    @include adaptive-font(14px, 767px, 82.5px, 1920px);
+    @include adaptive-font(16px, 767px, 82.5px, 1920px);
     font-weight: 600;
     line-height: 1;
-    color: var(--main-black);
-    padding-bottom: 49px;
+    color: inherit;
+    // padding-bottom: 49px;
+    padding-bottom: 9%;
     border-bottom: 4px solid var(--main-peach);
-    margin-bottom: 76px;
+    // margin-bottom: 76px;
+    margin-bottom: 14%;
   }
   &__subtitle {
-    @include adaptive-font(12px, 767px, 30px, 1920px);
+    @include adaptive-font(14px, 767px, 30px, 1920px);
     font-weight: normal;
     line-height: 1.2;
-    color: var(--main-black);
+    color: inherit;
     display: block;
     margin-bottom: 85px;
+    margin-bottom: 16%;
   }
   &__link {
-    @include adaptive-font(12px, 767px, 30px, 1920px);
-    font-weight: 600;
-    line-height: 2.2;
+    width: 50%;
+    line-height: 66px;
     color: var(--main-peach);
+    @include before-mobile {
+      line-height: 60px;
+      width: 120px;
+    }
   }
 }

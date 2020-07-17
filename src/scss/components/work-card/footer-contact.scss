@@ -1,0 +1,22 @@
+.footer-contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  &__mail {
+    font-size: 30px;
+    font-weight: 900;
+    line-height: normal;
+    color: var(--main-blue);
+    text-align: right;
+    display: block;
+    text-decoration: underline;
+  }
+  &__phone {
+    font-size: 30px;
+    font-weight: 900;
+    line-height: normal;
+    color: var(--main-black);
+    text-align: right;
+    display: block;
+  }
+}

@@ -1,0 +1,41 @@
+.footer-work-card {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  background: var(--footer-gray);
+  padding: 93px 2% 60px 2%;
+  @include before-mobile {
+    display: block;
+  }
+  &__wrapper-menu {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 800px;
+    justify-content: space-between;
+  }
+  &__wrapper-main-image {
+    display: block;
+    max-width: 220px;
+  }
+  &__wrapper-main-copyright {
+    font-size: 20px;
+    font-weight: normal;
+    color: var(--main-black);
+    padding: 16px 0;
+    &-year {
+      line-height: 3.25;
+      text-transform: uppercase;
+      display: block;
+    }
+    &-text {
+      line-height: 1.5;
+      display: block;
+    }
+  }
+  &__wrapper-main {
+    display: flex;
+    flex-direction: column;
+  }
+  &__wrapper-main-copyright {
+    margin-top: auto;
+  }
+}

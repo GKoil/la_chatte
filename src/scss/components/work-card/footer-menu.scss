@@ -1,0 +1,13 @@
+.footer-menu {
+  &__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  &__list-item-link {
+    padding: 0 10px;
+    font-size: 24px;
+    line-height: 2.71;
+    color: var(--main-black);
+  }
+}
