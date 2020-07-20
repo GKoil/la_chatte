@@ -2,7 +2,7 @@
   display: grid;
   grid-template-columns: 1fr 2fr 1fr;
   background: var(--footer-gray);
-  padding: 93px 2% 60px 2%;
+  padding: 4.8% 2% 3% 2%;
   @include before-mobile {
     display: block;
   }
@@ -17,7 +17,7 @@
     max-width: 220px;
   }
   &__wrapper-main-copyright {
-    font-size: 20px;
+    @include adaptive-font(12px, $mobile-width-only, 20px, $desktop-width);
     font-weight: normal;
     color: var(--main-black);
     padding: 16px 0;
@@ -34,6 +34,18 @@
   &__wrapper-main {
     display: flex;
     flex-direction: column;
+    @include before-mobile {
+      width: 225px;
+      margin: 0 auto;
+      text-align: center;
+    }
+  }
+  &__wrapper-social {
+    @include before-mobile {
+      width: 225px;
+      margin: 0 auto;
+      text-align: center;
+    }
   }
   &__wrapper-main-copyright {
     margin-top: auto;

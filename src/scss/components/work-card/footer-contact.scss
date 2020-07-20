@@ -3,20 +3,26 @@
   flex-direction: column;
   justify-content: space-between;
   &__mail {
-    font-size: 30px;
+    @include adaptive-font(18px, $mobile-width-only, 30px, $desktop-width);
     font-weight: 900;
     line-height: normal;
     color: var(--main-blue);
     text-align: right;
     display: block;
     text-decoration: underline;
+    @include before-mobile {
+      text-align: center;
+    }
   }
   &__phone {
-    font-size: 30px;
+    @include adaptive-font(18px, $mobile-width-only, 30px, $desktop-width);
     font-weight: 900;
     line-height: normal;
     color: var(--main-black);
     text-align: right;
     display: block;
+    @include before-mobile {
+      text-align: center;
+    }
   }
 }

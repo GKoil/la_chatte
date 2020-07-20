@@ -23,6 +23,12 @@
     font-weight: normal;
     line-height: 1.74;
     color: var(--main-black);
+    @include after-tablet {
+      margin-right: 80px;
+    }
+    @include before-mobile {
+      margin-bottom: 10px;
+    }
   }
   &__sale {
     background: center/cover no-repeat url('../images/work-card-sale.jpg') var(--main-black);

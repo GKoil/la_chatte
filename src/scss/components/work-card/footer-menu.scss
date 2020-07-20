@@ -7,6 +7,7 @@
   &__list-item-link {
     padding: 0 10px;
     font-size: 24px;
+    @include adaptive-font(14px, $mobile-width-only, 24px, $desktop-width);
     line-height: 2.71;
     color: var(--main-black);
   }
