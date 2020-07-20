@@ -1,5 +1,5 @@
 .services {
-  &__list {
+  &__wrapper {
     list-style: none;
     padding: 0;
     margin: 0;
@@ -10,7 +10,7 @@
       display: block;
     }
   }
-  &__list-item {
+  &__wrapper-card {
     margin-bottom: 51px;
     padding: 6.1% 2.2% 5.2% 2.2%;
     border-radius: 20px;
@@ -31,7 +31,7 @@
       box-shadow: -39.6px 38.2px 136px 0 rgba(0, 0, 0, 0.39);
       background-color: var(--services-black);
     }
-    &:hover > .card {
+    &:hover {
       color: var(--main-white);
     }
   }
