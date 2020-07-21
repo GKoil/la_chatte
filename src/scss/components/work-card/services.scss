@@ -43,10 +43,8 @@
     font-weight: 600;
     line-height: 1;
     color: inherit;
-    // padding-bottom: 49px;
     padding-bottom: 9%;
     border-bottom: 4px solid var(--main-peach);
-    // margin-bottom: 76px;
     margin-bottom: 14%;
     @include before-mobile {
       padding-bottom: 4%;
@@ -60,11 +58,10 @@
     color: inherit;
     display: block;
     @include after-tablet {
-      // margin-bottom: 85px;
       margin-bottom: 16%;
     }
   }
-  &__link {
+  & .link-description {
     width: 50%;
     line-height: 66px;
     color: var(--main-peach);
