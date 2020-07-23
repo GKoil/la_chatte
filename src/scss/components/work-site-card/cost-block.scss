@@ -1,0 +1,80 @@
+.cost-block {
+  border-radius: 20px;
+  box-shadow: 0px 24px 70px 0 rgba(0, 0, 0, 0.06);
+  background-color: var(--main-white);
+  padding: 2.8% 1.7% 3% 2%;
+  &__packages {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 12%;
+    width: 100%;
+    justify-content: space-between;
+  }
+  &__package-speed {
+    display: block;
+    position: relative;
+    padding-right: 52px;
+    @include before-mobile {
+      padding-right: 8.4%;
+    }
+    &::after {
+      position: absolute;
+      content: "";
+      top: 15px;
+      right: 18px;
+      width: 1px;
+      height: 90%;
+      background-color: var(--main-black);
+      transform: rotate(15deg);
+    }
+  }
+  &__package-speed-title {
+    @include adaptive-font(20px, 767px, 46px, 1920px);
+    font-weight: 700;
+    font-style: normal;
+    line-height: 1.39;
+    color: var(--main-black);
+    margin-bottom: 26px;
+  }
+  &__package-speed-cost {
+    @include adaptive-font(22px, 767px, 82.5px, 1920px);
+    font-weight: 700;
+    line-height: 0.88;
+    color: var(--main-black);
+  }
+  &__package-individual {
+    display: block;
+    margin-top: 10px;
+    @include after-tablet {
+      margin-top: 20px;
+    }
+  }
+  &__package-individual-title {
+    @include adaptive-font(10px, 767px, 24px, 1920px);
+    font-weight: 400;
+    line-height: 1.58;
+    letter-spacing: normal;
+    text-align: left;
+    color: var(--cost-block-gray);
+    margin-bottom: 23px;
+  }
+  &__package-individual-cost {
+    @include adaptive-font(20px, 767px, 40px, 1920px);
+    font-weight: 700;
+    line-height: 0.95;
+    color: var(--cost-block-gray);
+  }
+  &__button {
+    border-radius: 34.2px;
+    background-color: var(--main-peach);
+    border: 1px solid;
+    padding: 26px;
+    @include adaptive-font(12px, 767px, 22px, 1920px);
+    font-weight: 500;
+    line-height: normal;
+    text-align: center;
+    color: var(--main-white);
+    text-transform: uppercase;
+    width: 100%;
+  }
+}

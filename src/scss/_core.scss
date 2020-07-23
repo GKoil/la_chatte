@@ -36,13 +36,18 @@ button {
 	white-space: nowrap;
 	width: 1px;
 }
+body, html {
+	height: 100%;
+}
 body {
 	display: flex;
 	flex-direction: column;
-	height: 100%;
 }
 main {
-	flex-grow: 1;
+	flex: 1 0 auto;
+}
+footer {
+	flex-shrink: 0;
 }
 // Delete outline
 :active, :hover, :focus {

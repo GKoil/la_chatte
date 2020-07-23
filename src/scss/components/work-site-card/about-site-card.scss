@@ -1,0 +1,45 @@
+.about-site-card {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  @include before-mobile {
+    display: block;
+  }
+  &__description {
+    flex: 1 1 50%;
+    @include before-mobile {
+      margin-bottom: 20px;
+    }
+  }
+  &__description-title {
+    @include adaptive-font(28px, 767px, 100.5px, 1920px);
+    font-weight: normal;
+    line-height: 1;
+    color: var(--main-black);
+    margin-bottom: 7.9%;
+    @include before-mobile {
+      margin-bottom: 3%;
+    }
+  }
+  &__description-subtitle {
+    @include adaptive-font(14px, 767px, 24px, 1920px);
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.58;
+    letter-spacing: normal;
+    text-align: left;
+    color: var(--main-black);
+    max-width: 788px;
+    display: block;
+    padding-right: 10px;
+  }
+  & .cost-block {
+    max-width: 759px;
+    flex: 1 1 50%;
+    @include before-mobile {
+      margin: 0 auto;
+      max-width: 450px;
+    }
+  }
+}
