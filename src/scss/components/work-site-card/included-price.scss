@@ -1,0 +1,46 @@
+.included-price {
+  &__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  &__list-item {
+    padding: 7.5% 8.9% 6.2% 27.2%;
+    position: relative;
+    &::before {
+      position: absolute;
+      content: "";
+      @include sprite($like);
+      top: 35%;
+      left: 11%;
+      width: 8%;
+      height: 25%;
+      background-size: 140%;
+      background-repeat: no-repeat;
+    }
+    border-radius: 20px;
+    box-shadow: 0px 24px 70px 0 rgba(0, 0, 0, 0.06);
+    background-color: var(--main-white);
+    margin-bottom: 3%;
+  }
+  &__list-item-text {
+    display: block;
+    @include adaptive-font(14px, 767px, 24px, 1920px);
+    line-height: 1.58;
+    text-align: left;
+    color: var(--main-black);
+    min-height: 74px;
+  }
+  &__button-more {
+    @include adaptive-font(12px, 767px, 22px, 1920px);
+    font-weight: 500;
+    padding: 2.4%;
+    text-align: center;
+    color: var(--main-white);
+    text-transform: uppercase;
+    width: 100%;
+    border: none;
+    border-radius: 34.2px;
+    background-color: var(--main-blue);
+  }
+}

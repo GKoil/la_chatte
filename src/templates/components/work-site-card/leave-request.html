@@ -1,0 +1,43 @@
+<section class="work-site-card__leave-request leave-request">
+  <h2 class="leave-request__title">Оставьте заявку</h2>
+  <span class="leave-request__call"><span class="leave-request__call-text">или позвоните по номеру</span><a class="leave-request__call-phone" href="tel:+7(123)456-78-90">+7 123 456-78-90</a></span>
+  <form class="leave-request__form" action="#">
+    <fieldset class="leave-request__form-user">
+      <div class="leave-request__form-user-wrapper">
+        <div>
+          <input class="leave-request__form-input" class="" type="text" placeholder="Имя" name="name-user" id="user-name">
+          <label class="leave-request__form-label" for="user-name">В данном поле введены неверные данные</label>
+        </div>
+        <div>
+          <input class="leave-request__form-input" type="text" placeholder="Телефон" name="phone-user" id="user-phone">
+          <label class="leave-request__form-label" for="user-phone">В данном поле введены неверные данные</label>
+        </div>
+      </div>
+      <input class="leave-request__form-text" type="text" placeholder="Текст" name="text-user" id="user-text">
+    </fieldset>
+    <fieldset class="leave-request__form-nda">
+      <input class="leave-request__form-input-nda" type="checkbox" name="need-nda" id="nda">
+      <label class="leave-request__form-label-nda" for="nda">Нужен NDA</label>
+      <div class="leave-request__form-nda-wrapper">
+        <div>
+          <input class="leave-request__form-input" class="" type="text" placeholder="Должность *" name="" id="nda-position">
+          <label class="leave-request__form-label" class="" for="nda-position">В данном поле введены неверные данные</label>
+        </div>
+        <div>
+          <input class="leave-request__form-input" type="text" placeholder="Компания *" name="" id="nda-company">
+          <label class="leave-request__form-label" for="nda-company">В данном поле введены неверные данные</label>
+        </div>
+      </div>
+      <div>
+        <input class="leave-request__form-input" type="text" placeholder="Адрес *" name="" id="nda-adress">
+        <label class="leave-request__form-label" for="nda-adress">В данном поле введены неверные данные</label>
+      </div>
+    </fieldset>
+    <div class="leave-request__form-send-wrapper">
+      <span class="leave-request__form-send-privacy">
+        Я согласен с <a href="#">политикой конфиденциальности</a> и <a href="#">использования запрашиваемых данных</a>
+      </span>
+      <button class="leave-request__form-send-button" type="button">Оставить заявку</button>
+    </div>
+  </form>
+</section>

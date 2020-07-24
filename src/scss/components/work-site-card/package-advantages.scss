@@ -1,0 +1,49 @@
+.package-advantages {
+  &__title {
+    @include adaptive-font(23px, $mobile-width-only, 46px, 1920px);
+    font-weight: 900;
+    line-height: 1.39;
+    text-align: left;
+    color: var(--main-black);
+    margin-bottom: 8.5%;
+    letter-spacing: 2.6px;
+    @include before-mobile {
+      text-align: center;
+    }
+  }
+  &__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    @include before-mobile {
+      display: block;
+    }
+  }
+  &__list-item {
+    max-width: 346px;
+    margin-bottom: 66px;
+    @include before-mobile {
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 20px;
+    }
+  }
+  &__list-item-title {
+    @include adaptive-font(20px, $mobile-width-only, 40px, 1920px);
+    line-height: 1;
+    text-align: left;
+    color: var(--page-work-site-card-blue);
+    font-weight: 600;
+    margin-bottom: 18px;
+    letter-spacing: -2px;
+  }
+  &__list-item-subtitle {
+    @include adaptive-font(12px, $mobile-width-only, 24px, 1920px);
+    line-height: 1.58;
+    text-align: left;
+    color: var(--main-black);
+  }
+}

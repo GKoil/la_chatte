@@ -12,13 +12,17 @@
     }
   }
   &__description-title {
-    @include adaptive-font(28px, 767px, 100.5px, 1920px);
-    font-weight: normal;
+    @include adaptive-font(28px, 767px, 100px, 1920px);
+    font-weight: 600;
+    margin-top: -6px;
+    margin-left: -6px;
+    letter-spacing: -4.1px;
     line-height: 1;
     color: var(--main-black);
-    margin-bottom: 7.9%;
+    margin-bottom: 4.9%;
     @include before-mobile {
       margin-bottom: 3%;
+      letter-spacing: normal;
     }
   }
   &__description-subtitle {

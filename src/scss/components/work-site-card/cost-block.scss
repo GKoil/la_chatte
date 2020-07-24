@@ -2,13 +2,27 @@
   border-radius: 20px;
   box-shadow: 0px 24px 70px 0 rgba(0, 0, 0, 0.06);
   background-color: var(--main-white);
-  padding: 2.8% 1.7% 3% 2%;
+  padding: 1% 1.7% 3% 2%;
   &__packages {
     display: flex;
     flex-wrap: wrap;
-    margin-bottom: 12%;
-    width: 100%;
+    margin-bottom: 11%;
+    width: 96.4%;
     justify-content: space-between;
+    position: relative;
+    &::after {
+      position: absolute;
+      content: "";
+      top: 7px;
+      right: 48%;
+      width: 1px;
+      height: 95%;
+      background-color: var(--main-black);
+      transform: rotate(11deg);
+      @include before-mobile {
+        top: 7px;
+      }
+    }
   }
   &__package-speed {
     display: block;
@@ -17,16 +31,6 @@
     @include before-mobile {
       padding-right: 8.4%;
     }
-    &::after {
-      position: absolute;
-      content: "";
-      top: 15px;
-      right: 18px;
-      width: 1px;
-      height: 90%;
-      background-color: var(--main-black);
-      transform: rotate(15deg);
-    }
   }
   &__package-speed-title {
     @include adaptive-font(20px, 767px, 46px, 1920px);
@@ -34,19 +38,20 @@
     font-style: normal;
     line-height: 1.39;
     color: var(--main-black);
-    margin-bottom: 26px;
+    margin-bottom: 19px;
   }
   &__package-speed-cost {
     @include adaptive-font(22px, 767px, 82.5px, 1920px);
     font-weight: 700;
     line-height: 0.88;
     color: var(--main-black);
+    letter-spacing: -3px;
   }
   &__package-individual {
     display: block;
     margin-top: 10px;
     @include after-tablet {
-      margin-top: 20px;
+      margin-top: 24px;
     }
   }
   &__package-individual-title {
@@ -56,7 +61,7 @@
     letter-spacing: normal;
     text-align: left;
     color: var(--cost-block-gray);
-    margin-bottom: 23px;
+    margin-bottom: 15px;
   }
   &__package-individual-cost {
     @include adaptive-font(20px, 767px, 40px, 1920px);
@@ -68,13 +73,13 @@
     border-radius: 34.2px;
     background-color: var(--main-peach);
     border: 1px solid;
-    padding: 26px;
+    padding: 21px;
     @include adaptive-font(12px, 767px, 22px, 1920px);
     font-weight: 500;
     line-height: normal;
     text-align: center;
     color: var(--main-white);
     text-transform: uppercase;
-    width: 100%;
+    width: 95%;
   }
 }

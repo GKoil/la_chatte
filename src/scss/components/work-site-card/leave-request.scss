@@ -1,0 +1,27 @@
+.leave-request {
+  &__title {}
+  &__call {}
+  &__call-phone {}
+  &__call-text {}
+
+  &__form {}
+  &__form-input {}
+  &__form-label {}
+  &__form-text {}
+
+  &__form-user {}
+  &__form-user-wrapper {}
+
+  &__form-nda {}
+  &__form-nda-wrapper {}
+  &__form-input-nda {}
+  &__form-label-nda {}
+
+  &__form-send-button {}
+  &__form-send-privacy {}
+  &__form-send-wrapper {}
+}
+
+.work-site-card {
+  &__leave-request {}
+}
