@@ -6,6 +6,9 @@
     color: var(--main-black);
     max-width: 900px;
     margin-bottom: 130px;
+    @include before-mobile {
+      margin-bottom: 13%;
+    }
   }
   &__list {
     margin: 0;
@@ -21,6 +24,9 @@
     padding-left: 110px;
     flex: 0 0 27.8%;
     margin-bottom: 112px;
+    @include before-mobile {
+      margin-bottom: 13%;
+    }
     margin-right: 5px;
     position: relative;
     &--wide {

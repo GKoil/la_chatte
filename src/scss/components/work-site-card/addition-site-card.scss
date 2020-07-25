@@ -1,0 +1,10 @@
+.addition-site-card {
+  &__title {
+    font-size: 100px;
+    @include adaptive-font(26px, 767px, 100px, 1920px);
+    font-weight: 900;
+    color: var(--main-black);
+    margin-bottom: 5.3%;
+    line-height: 1;
+  }
+}

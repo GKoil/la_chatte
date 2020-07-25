@@ -10,12 +10,12 @@
     &::before {
       position: absolute;
       content: "";
-      @include sprite($like);
+      background-image: url(../images/icons/like.png);
       top: 35%;
       left: 11%;
       width: 8%;
       height: 25%;
-      background-size: 140%;
+      background-size: 100%;
       background-repeat: no-repeat;
     }
     border-radius: 20px;
